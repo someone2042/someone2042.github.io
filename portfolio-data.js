@@ -549,14 +549,6 @@ window.PORTFOLIO_DATA = {
   ],
 
   "awards": [
-    {
-      "id": "skillup",
-      "title": "1st Place (IT) — SKILL'UP 2026",
-      "meta": "EMAN Aerospace × Université Cadi Ayyad · May 2026",
-      "color": "#f5b301",
-      "icon": "1st",
-      "description": "Security & Telecom Architect in a 7-person Agile Kanban team. Designed the Qualys VMDR vulnerability and compliance solution for the university. Awarded the Attestation d'Excellence."
-    }
   ],
 
   "stack": [
