@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shortest path to hire Mohamed El Mahdaoui · IT Security &amp; AI Engineer</title>
+<meta name="description" content="Mohamed El Mahdaoui — IT Security & AI engineer. SOC, AI SecOps, Zero Trust, Offensive Security. 3 internships, 9 projects, CompTIA Security+.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="portfolio-data.js"></script>
+<style>
+/* ── TOKENS ─────────────────────────────────────────────── */
+:root {
+  --bg:#07080d; --pan:#0e1018; --ink:#e8eaf3; --dim:#7e8397; --line:#222637; --edge:#3a4060;
+  --me:#ffffff; --role:#ff2e93; --proj:#27d3ff; --cert:#ffb020; --org:#9b7bff; --you:#ff4d4d;
+  --r:14px; --f:'Inter',Helvetica,Arial,sans-serif; --m:'JetBrains Mono',ui-monospace,monospace;
+}
+@media(prefers-color-scheme:light){:root:not([data-theme=dark]){
+  --bg:#eef0f6;--pan:#fff;--ink:#12141f;--dim:#60667c;--line:#d5d9e6;--edge:#9aa1bd;
+  --me:#12141f;--role:#e0126f;--proj:#0a8fb8;--cert:#c27a00;--org:#6b44e6;--you:#d62020
+}}
+:root[data-theme=light]{
+  --bg:#eef0f6;--pan:#fff;--ink:#12141f;--dim:#60667c;--line:#d5d9e6;--edge:#9aa1bd;
+  --me:#12141f;--role:#e0126f;--proj:#0a8fb8;--cert:#c27a00;--org:#6b44e6;--you:#d62020
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:env(safe-area-inset-top,0)}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--f);min-height:100vh;-webkit-font-smoothing:antialiased}
+
+/* ── HEADER ─────────────────────────────────────────────── */
+header{max-width:1200px;margin:0 auto;padding:22px 18px 6px}
+.top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--dim);font:11px var(--m);letter-spacing:.14em;text-transform:uppercase}
+.ok{color:#2fe39a}
+h1{font:900 clamp(34px,6.4vw,76px)/1 var(--f);letter-spacing:-.045em;margin:26px 0 10px}
+h1 span{color:var(--role)}
+.sub{max-width:640px;color:var(--dim);margin:0 0 6px}
+
+/* ── GRAPH ───────────────────────────────────────────────── */
+.app{max-width:1200px;margin:14px auto 0;padding:0 18px 70px;display:grid;grid-template-columns:1fr 340px;gap:14px}
+.cv{position:relative;border:1px solid var(--line);border-radius:var(--r);height:720px;overflow:hidden;
+  background:radial-gradient(circle,var(--line) 1px,transparent 1.6px) 0 0/26px 26px,
+  radial-gradient(circle at 50% 45%,color-mix(in oklab,var(--role) 9%,var(--bg)),var(--bg) 70%)}
+canvas{width:100%;height:100%;display:block;touch-action:pan-y;cursor:grab}
+.log{position:absolute;left:12px;bottom:10px;right:12px;color:var(--dim);pointer-events:none;font:11px var(--m)}
+.leg{position:absolute;left:12px;top:10px;display:flex;gap:12px;flex-wrap:wrap;color:var(--dim);pointer-events:none;font:11px var(--m);max-width:55%}
+.leg i{display:inline-block;width:9px;height:9px;margin-right:5px;border-radius:2px}
+.pan{border:1px solid var(--line);border-radius:var(--r);background:var(--pan);padding:20px;display:flex;flex-direction:column;gap:12px;height:720px;overflow:auto}
+.pan h2{font:800 28px/1.1 var(--f);letter-spacing:-.03em}
+.pan p{color:var(--dim);font-size:15px}
+.tag{display:inline-block;padding:2px 8px;border-radius:5px;color:#07080d;font:700 11px var(--m);letter-spacing:.1em;text-transform:uppercase;width:fit-content}
+.path{font:12px/1.6 var(--m);color:var(--ink);border-left:3px solid var(--role);padding-left:10px}
+.nb{display:flex;flex-wrap:wrap;gap:6px}
+.nb button{font:inherit;font-size:13px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:7px;padding:4px 9px;cursor:pointer;transition:.2s}
+.nb button:hover{border-color:var(--role)}
+.ct{margin-top:auto;display:grid;gap:6px}
+.ct a{color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:9px;padding:9px 12px;font-size:14px;display:flex;justify-content:space-between;transition:.2s}
+.ct a:hover{border-color:var(--role);transform:translateX(2px)}
+.ct a:first-child{background:var(--role);border-color:var(--role);color:#fff;font-weight:700}
+.tb{position:absolute;right:10px;top:10px;display:flex;gap:4px;background:var(--pan);border:1px solid var(--line);border-radius:9px;padding:3px}
+.tb button{font:inherit;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);background:none;border:0;border-radius:6px;padding:6px 9px;cursor:pointer;transition:.2s}
+.tb button.on{background:var(--role);color:#fff}
+
+/* ── CLASSIC SECTION (Straight into experience & projects) ─ */
+#classic{max-width:1000px;margin:0 auto;padding:10px 18px 90px;border-top:1px solid var(--line)}
+
+/* ── SECTION HEADINGS ────────────────────────────────────── */
+.xh{margin:50px 0 20px;color:var(--role);font:700 11px var(--m);letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.xh::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ── EXPANDABLE ROWS ─────────────────────────────────────── */
+.xi{animation:xin .45s both}@keyframes xin{from{opacity:0;transform:translateY(8px)}}
+.xi.off{display:none!important}
+.xr{position:relative;display:grid;grid-template-columns:60px 1fr auto;gap:18px;align-items:center;padding:16px 12px;border-top:1px solid var(--line);cursor:pointer;border-radius:12px;overflow:hidden;outline:0}
+.xr::before{content:"";position:absolute;inset:0;background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),color-mix(in oklab,var(--c) 20%,transparent),transparent 70%);opacity:0;transition:opacity .25s;pointer-events:none}
+.xr:hover::before,.xr:focus-visible::before{opacity:1}
+.bd{width:56px;height:56px;border-radius:15px;display:grid;place-items:center;font:800 17px var(--m);color:#fff;background:linear-gradient(135deg,var(--c),color-mix(in oklab,var(--c) 50%,#000));box-shadow:0 8px 20px color-mix(in oklab,var(--c) 38%,transparent);position:relative;overflow:hidden;flex:none}
+.bd::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.4) 50%,transparent 65%);transform:translateX(-110%);transition:transform .8s}
+.xr:hover .bd::after,.cw:hover .bd::after{transform:translateX(110%)}
+
+/* Logo badge variant */
+.bd-logo{background:#ffffff!important;border:1px solid var(--line)!important;box-shadow:0 4px 14px rgba(0,0,0,.25)!important;padding:5px}
+.bd-logo img{width:100%;height:100%;object-fit:contain;border-radius:8px;display:block}
+.xr h4{font:700 clamp(18px,2.4vw,23px)/1.2 var(--f);letter-spacing:-.025em}
+.xr .m{color:var(--dim);font-size:14px;margin-top:2px}
+.tgs{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px;font:11px var(--m);letter-spacing:.06em}
+.pl{font-size:30px;line-height:1;color:var(--dim);transition:transform .35s,color .2s}
+.xr.open .pl{transform:rotate(45deg);color:var(--c)}
+.xd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.3,.8,.3,1)}
+.xd.open{grid-template-rows:1fr}
+.xd>div{overflow:hidden}
+.xdi{padding:4px 12px 26px 90px}
+.xdi ul{margin:0 0 14px;padding-left:18px}
+.xdi li{margin:5px 0;color:var(--dim);font-size:15px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-bottom:16px}
+.cols .lbl{display:block;margin-bottom:4px;font:700 11px var(--m);letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+.cols p{color:var(--dim);font-size:15px}
+
+/* ── CHIPS ───────────────────────────────────────────────── */
+.chs{display:flex;flex-wrap:wrap;gap:8px}
+.ch{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:99px;padding:3px 12px 3px 4px;font-size:13px;transition:border-color .2s,transform .2s;background:var(--pan)}
+.ch:hover{border-color:var(--c,var(--role));transform:translateY(-2px)}
+.ch i{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font:700 9px var(--m);color:#fff;font-style:normal;background:var(--c,#6b7280)}
+
+/* ── FILTERS ─────────────────────────────────────────────── */
+.fl{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.fl button{font:700 14px var(--f);color:var(--ink);background:transparent;border:1.5px solid var(--line);border-radius:99px;padding:7px 16px;cursor:pointer;transition:.2s}
+.fl button:hover{border-color:var(--c,var(--role))}.fl button.on{background:var(--c,var(--role));border-color:var(--c,var(--role));color:#fff}
+.fl sup{opacity:.7;margin-left:5px;font-size:11px}
+
+/* ── STACK ───────────────────────────────────────────────── */
+.sg{display:grid;grid-template-columns:170px 1fr;gap:10px 24px;padding:16px 0;border-top:1px solid var(--line);align-items:start}
+
+/* ── CERTS ───────────────────────────────────────────────── */
+.wall{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 28px}
+.cw{display:flex;gap:14px;align-items:center;padding:14px 8px;border-top:1px solid var(--line);position:relative;cursor:pointer;transition:background .2s,padding-left .2s;border-radius:8px}
+.cw:hover{background:color-mix(in oklab,var(--c) 8%,transparent);padding-left:16px}
+.cert-logo{width:54px;height:54px;border-radius:12px;flex:none;overflow:hidden;display:grid;place-items:center;background:#ffffff;border:1px solid var(--line);padding:5px}
+.cert-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.cert-logo.fb{background:linear-gradient(135deg,var(--c),color-mix(in oklab,var(--c) 50%,#000));border:none;font:700 16px var(--m);color:#fff}
+.cw b{display:block;font-size:15px;line-height:1.3}
+.cw span{color:var(--dim);font-size:13px}
+
+/* ── EDUCATION ───────────────────────────────────────────── */
+.edu-row{display:grid;grid-template-columns:68px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+.school-logo{width:62px;height:62px;border-radius:14px;object-fit:contain;background:#ffffff;border:1px solid var(--line);padding:6px;display:block}
+.school-fb{width:62px;height:62px;border-radius:14px;display:grid;place-items:center;font:700 15px var(--m);color:#fff}
+
+/* ── VIEW BUTTON ─────────────────────────────────────────── */
+.vbtn{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:9px 20px;border-radius:99px;border:none;color:#fff;font:700 13px var(--f);cursor:pointer;transition:opacity .2s,transform .2s;text-decoration:none}
+.vbtn:hover{opacity:.9;transform:translateY(-2px)}
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+.fin{margin-top:90px;text-align:center;padding-bottom:60px}
+.fin h2{font:800 clamp(34px,6vw,64px)/1.02 var(--f);letter-spacing:-.04em;margin-bottom:10px}
+.fin .sub{margin:0 auto 24px}
+.gt{background:linear-gradient(90deg,var(--role),var(--proj),var(--cert));-webkit-background-clip:text;background-clip:text;color:transparent}
+.fb-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.fb-row a{color:var(--ink);text-decoration:none;border:1.5px solid var(--line);border-radius:99px;padding:11px 22px;font-weight:700;transition:.2s}
+.fb-row a:hover{border-color:var(--role);transform:translateY(-2px)}
+.fb-row a.p{background:linear-gradient(90deg,var(--role),var(--org));border-color:transparent;color:#fff}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media(max-width:860px){.app{grid-template-columns:1fr}.cv{height:540px}.pan{height:auto}}
+@media(max-width:700px){
+  .xdi{padding-left:12px}.sg{grid-template-columns:1fr}
+  .xr{grid-template-columns:48px 1fr auto;gap:12px}.bd{width:48px;height:48px}
+  .edu-row{grid-template-columns:52px 1fr;gap:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="top" id="hdr-top"></div>
+  <h1>Find the shortest<br>path to <span>hire me.</span></h1>
+  <p class="sub">An attack-path graph, but for hiring. Every node is real evidence. Tap a role to light up the path. Drag nodes. Tap anything. <a href="#classic" style="color:var(--role)">Jump straight to Experience &amp; Projects ↓</a></p>
+</header>
+
+<!-- GRAPH + PANEL -->
+<div class="app">
+  <div class="cv">
+    <canvas id="c"></canvas>
+    <div class="leg">
+      <span><i style="background:var(--you)"></i>You</span>
+      <span><i style="background:var(--role)"></i>Role</span>
+      <span><i style="background:var(--proj)"></i>Project</span>
+      <span><i style="background:var(--cert)"></i>Cert</span>
+      <span><i style="background:var(--org)"></i>Org</span>
+    </div>
+    <div class="tb" id="tb">
+      <button class="on" data-m="organic">Organic</button>
+      <button data-m="circular">Circular</button>
+      <button data-m="tree">Hierarchy</button>
+    </div>
+    <div class="log" id="lg"></div>
+  </div>
+  <aside class="pan" id="pn"></aside>
+</div>
+
+<!-- CLASSIC SECTION (Straight into real content: No stats section) -->
+<section id="classic">
+  <div class="xh">// Experience</div>
+  <div id="xexp"></div>
+
+  <div class="xh">// Projects</div>
+  <div class="fl" id="fl"></div>
+  <div id="xpr"></div>
+
+  <div class="xh">// Stack</div>
+  <div id="xsk"></div>
+
+  <div class="xh">// Certifications</div>
+  <div class="wall" id="xct"></div>
+
+  <div class="xh">// Education &amp; Awards</div>
+  <div id="xed"></div>
+
+  <div class="fin">
+    <h2>Let's build something <span class="gt">secure.</span></h2>
+    <p class="sub" id="fin-sub"></p>
+    <div class="fb-row" id="fin-links"></div>
+  </div>
+</section>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+//  PORTFOLIO — driven entirely by portfolio.json
+// ═══════════════════════════════════════════════════════════════
+
+// ── Color palette for tech chips ───────────────────────────────
+const TC={
+  Python:"#3776ab",FastAPI:"#009688",LangGraph:"#1c7c6c",Gemini:"#8e75ff",Wazuh:"#2f80ed",
+  OpenSearch:"#005eb8",VirusTotal:"#394eff",PyOD:"#e4572e",SHAP:"#ff0051",Drain3:"#6c5ce7",
+  Docker:"#2496ed","scikit-learn":"#f89939",Cloudflare:"#f38020",WARP:"#f38020","Entra ID":"#0078d4",
+  CASB:"#7a5af8",VirtualBox:"#183a61",pfSense:"#212d6e",Suricata:"#e8532b",Zeek:"#1b7f9e",
+  Sysmon:"#0078d4",CrowdSec:"#6e56cf","Atomic Red Team":"#d62828",BadBlood:"#b00020",
+  "Burp Suite":"#ff6633",GraphQL:"#e10098",React:"#149eca",ADB:"#3ddc84",Android:"#2fa866",
+  Nmap:"#2a7ab0",SQLite:"#0f80cc",Qualys:"#ed2e26",ServiceNow:"#4aa83a",Azure:"#0078d4",
+  Splunk:"#e0603a",Fortinet:"#ee3124",Cisco:"#1ba0d7",Zscaler:"#0076b6",Linux:"#e8a800",
+  Java:"#e76f00","C/C++":"#00599c",Bash:"#4eaa25",PHP:"#777bb4",Laravel:"#ff2d20",
+  JavaScript:"#d9b800",Oracle:"#c74634",GitLab:"#fc6d26","Active Directory":"#0078d4",
+  Metasploit:"#2a6fbb",Windows:"#0078d4",BPMN:"#f4a322",ArchiMate:"#5b84c4",
+  "AWS Secrets Manager":"#ff9900","AWS CloudTrail":"#ff9900","AWS CloudWatch":"#ff9900","AWS S3":"#ff9900","AWS SNS":"#ff9900",
+  "GitLab CI/CD":"#fc6d26","DevSecOps":"#20c997","SAST/DAST":"#fd7e14","OWASP Top 10":"#0077b6","REST APIs":"#6f42c1",
+  "Cryptography":"#00b4d8","AES-256":"#0077b6","ECDH":"#7209b7","X3DH":"#f72585","Double Ratchet":"#4361ee","HMAC-SHA256":"#4cc9f0",
+  "Node.js":"#68a063","WebSockets":"#343a40","AI Assistant":"#9b5de5"
+};
+const FD={soc:["SOC / Detection","#ff9500"],ai:["AI SecOps","#18c79a"],cloud:["Cloud & Zero Trust","#4d8dff"],off:["Offensive","#ff3b4e"],grc:["GRC & OT","#a566f5"]};
+
+const tc = n => TC[n]||(/^AWS/.test(n)?"#ff9900":/Law|GDPR|ISO|NIST|CIS|PCI/.test(n)?"#4457c8":"#6b7280");
+const ab = n => /^AWS/.test(n)?"AW":n.split(/[\s\-\/]+/).map(w=>w[0]||"").join("").slice(0,2).toUpperCase()||n.slice(0,2).toUpperCase();
+const chip = n => `<span class="ch" style="--c:${tc(n)}"><i>${ab(n)}</i>${n}</span>`;
+
+const $ = id => document.getElementById(id);
+
+// ── expandable row builder ──────────────────────────────────────
+function xRow(color, bdHtml, title, meta, tagHtml, detHtml, filt='') {
+  return `<div class="xi" data-f="${filt}" style="--c:${color}">
+    <div class="xr" tabindex="0" role="button" aria-expanded="false">
+      ${bdHtml}
+      <div>
+        <h4>${title}</h4>
+        <div class="m">${meta}</div>
+        ${tagHtml ? `<div class="tgs">${tagHtml}</div>` : ''}
+      </div>
+      <span class="pl" aria-hidden="true">+</span>
+    </div>
+    <div class="xd"><div><div class="xdi">${detHtml}</div></div></div>
+  </div>`;
+}
+
+// ── Data store ─────────────────────────────────────────────────
+let PROJECTS = [];
+let META = {};
+
+// ═══════════════════════════════════════════════════════════════
+//  RENDER FUNCTIONS
+// ═══════════════════════════════════════════════════════════════
+
+function renderHeader(m) {
+  $('hdr-top').innerHTML =
+    `<span>${m.name} · ${m.tagline}</span>` +
+    `<span class="ok">● ${m.status}</span>`;
+}
+
+function renderExperience(exps) {
+  $('xexp').innerHTML = exps.map(x => {
+    const imgPath = x.logo_image || x.img || '';
+    const bd = imgPath
+      ? `<div class="bd bd-logo" style="--c:${x.logo_bg}"><img src="${imgPath}" alt="${x.company}" class="bd-logo-img"></div>`
+      : `<div class="bd" style="--c:${x.logo_bg}">${x.logo_fallback}</div>`;
+    const tags = x.domains.map(k => `<span style="color:${FD[k][1]}">● ${FD[k][0]}</span>`).join('');
+    const det = `<ul>${x.bullets.map(b=>`<li>${b}</li>`).join('')}</ul><div class="chs">${x.stack.map(chip).join('')}</div>`;
+    return xRow(x.logo_bg, bd, `${x.role} · <span style="font-weight:600;font-size:16px;color:var(--dim)">${x.company}</span>`, x.meta, tags, det);
+  }).join('');
+}
+
+function renderProjects(projs) {
+  PROJECTS = projs;
+  const firstDomain = p => p.domains[0] || 'soc';
+  $('xpr').innerHTML = projs.map(p => {
+    const f0 = firstDomain(p), c = FD[f0] ? FD[f0][1] : p.color;
+    const abbr = p.title.split(/[\s\-]+/).map(w=>w[0]||'').join('').slice(0,2).toUpperCase();
+    const bd = `<div class="bd" style="--c:${c}">${abbr}</div>`;
+    const tags = p.domains.map(k => FD[k]?`<span style="color:${FD[k][1]}">● ${FD[k][0]}</span>`:'').join('');
+    const statusBadge = p.status ? `<span style="color:#f59e0b;font-weight:700">🚧 ${p.status}</span>` : '';
+    const allTags = [tags, statusBadge].filter(Boolean).join(' ');
+    const det = `
+      <div class="cols">
+        <div><span class="lbl">Why it matters</span><p>${p.why}</p></div>
+        <div><span class="lbl">What I built</span><p>${p.what}</p></div>
+        <div><span class="lbl">Outcome</span><p>${p.outcome}</p></div>
+      </div>
+      <div class="chs">${p.stack.map(chip).join('')}</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+        <a href="project.html?id=${p.id}" class="vbtn" style="background:${c}">↗ Full Project Details, Report &amp; Media</a>
+      </div>`;
+    return xRow(c, bd, p.title, `${p.built_at} · ${p.year}`, allTags, det, p.domains.join(' '));
+  }).join('');
+
+  // filter
+  const items = [...document.querySelectorAll('#xpr .xi')];
+  $('fl').innerHTML =
+    `<button class="on" data-f="all">All<sup>${projs.length}</sup></button>` +
+    Object.keys(FD).map(k=>
+      `<button data-f="${k}" style="--c:${FD[k][1]}">${FD[k][0]}<sup>${items.filter(i=>i.dataset.f.split(' ').includes(k)).length}</sup></button>`
+    ).join('');
+  $('fl').onclick = e => {
+    const b = e.target.closest('button'); if(!b) return;
+    document.querySelectorAll('#fl button').forEach(z=>z.classList.toggle('on',z===b));
+    const f = b.dataset.f;
+    items.forEach(i => { const show=f==='all'||i.dataset.f.split(' ').includes(f); i.classList.toggle('off',!show); });
+  };
+}
+
+function renderStack(stack) {
+  $('xsk').innerHTML = stack.map(g =>
+    `<div class="sg"><span style="color:var(--dim);font:700 11px var(--m);letter-spacing:.1em;text-transform:uppercase;padding-top:6px">${g.category}</span><div class="chs">${g.tools.map(chip).join('')}</div></div>`
+  ).join('');
+}
+
+function renderCerts(certs) {
+  $('xct').innerHTML = certs.map(c => {
+    const imgPath = c.logo_image || c.img || '';
+    const logo = imgPath
+      ? `<div class="cert-logo"><img src="${imgPath}" alt="${c.issuer}" class="cl-img"></div>`
+      : `<div class="cert-logo fb" style="--c:${c.color}">${c.issuer.slice(0,2).toUpperCase()}</div>`;
+    return `<div class="cw" style="--c:${c.color}" ${c.credential_url?`onclick="window.open('${c.credential_url}','_blank')" role="link" tabindex="0"`:''}>${logo}<div><b>${c.name}</b><span>${c.issuer} · ${c.date}</span></div></div>`;
+  }).join('');
+}
+
+function renderEducation(edus, awards) {
+  const awardHtml = awards.map(a => {
+    const bd = `<div class="bd" style="--c:${a.color};width:62px;height:62px;font-size:14px;border-radius:14px">${a.icon}</div>`;
+    return xRow(a.color, bd, a.title, a.meta, null, `<p style="color:var(--dim);font-size:15px;line-height:1.7">${a.description}</p>`);
+  }).join('');
+
+  const eduHtml = edus.map(e => {
+    const imgPath = e.logo_image || e.img || '';
+    const logo = imgPath
+      ? `<img src="${imgPath}" alt="${e.institution}" class="school-logo" loading="lazy">`
+      : `<div class="school-fb" style="background:${e.logo_bg}">${e.logo_fallback}</div>`;
+    return `<div class="edu-row">
+      ${logo}
+      <div>
+        <b style="font-size:18px;letter-spacing:-.02em">${e.degree}</b>
+        <div style="color:var(--dim);font-size:14px;margin-top:3px">${e.institution} · ${e.period}</div>
+        <p style="color:var(--dim);font-size:14px;margin-top:8px;line-height:1.6">${e.description}</p>
+      </div>
+    </div>`;
+  }).join('');
+
+  $('xed').innerHTML = awardHtml + eduHtml;
+}
+
+function renderFooter(m) {
+  $('fin-sub').textContent = `Open to a 6-month end-of-studies internship (PFE). Morocco: Marrakech, Casablanca, Rabat.`;
+  $('fin-links').innerHTML =
+    `<a class="p" href="mailto:${m.email}">Email me</a>
+     <a href="${m.linkedin}" target="_blank" rel="noopener">LinkedIn</a>
+     <a href="${m.github}"   target="_blank" rel="noopener">GitHub</a>
+     <a href="tel:${m.phone}">${m.phone_display}</a>`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  CLASSIC SECTION INTERACTIONS
+// ═══════════════════════════════════════════════════════════════
+function setupInteractions() {
+  const cl = $('classic');
+
+  // spotlight effect
+  cl.addEventListener('mousemove', e => {
+    const r = e.target.closest('.xr'); if(!r) return;
+    const b = r.getBoundingClientRect();
+    r.style.setProperty('--mx', e.clientX-b.left+'px');
+    r.style.setProperty('--my', e.clientY-b.top+'px');
+  });
+
+  // toggle expand
+  const tg = r => {
+    const open = r.classList.toggle('open');
+    r.setAttribute('aria-expanded', open);
+    r.nextElementSibling.classList.toggle('open');
+  };
+
+  cl.addEventListener('click', e => {
+    if (e.target.closest('a')) return;
+    const r = e.target.closest('.xr'); if(r) tg(r);
+  });
+  cl.addEventListener('keydown', e => {
+    if (e.key==='Enter' && e.target.classList.contains('xr')) tg(e.target);
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  GRAPH ENGINE — with Logo Icons inside Nodes
+// ═══════════════════════════════════════════════════════════════
+function initGraph(gData, meta) {
+  const N = gData.nodes.map(n=>({...n,t:n.type,l:n.label,d:n.desc,img:n.img,a:0,x:null,y:null,vx:0,vy:0}));
+  const I = Object.fromEntries(N.map((n,i)=>[n.id,i]));
+  const E = gData.edges;
+
+  // Preload actual node images
+  const nodeImages = {};
+  N.forEach(n => {
+    if (n.img) {
+      const im = new Image();
+      im.src = n.img;
+      im.onload = () => { nodeImages[n.id] = im; };
+    }
+  });
+
+  const cv=$('c'), ctx=cv.getContext('2d'), pn=$('pn'), lg=$('lg');
+  let W,H,dpr,sel=null,drag=null,moved=0,alpha=1,tick=0,cssv;
+
+  const nb = id => E.filter(e=>e[0]===id||e[1]===id).map(e=>e[0]===id?e[1]:e[0]);
+
+  function size(){
+    const r=cv.getBoundingClientRect(),w=r.width,h=r.height;
+    dpr=devicePixelRatio||1; cv.width=w*dpr; cv.height=h*dpr;
+    N.forEach(n=>{if(n.x!=null){n.x*=w/(W||w);n.y*=h/(H||h)}});
+    W=w; H=h;
+  }
+  size(); addEventListener('resize',()=>{size();alpha=.4});
+  const R=Math.min(W,H);
+  N.forEach((n,i)=>{const ring=n.t==='me'?0:n.t==='role'?.22:n.t==='you'?.46:.38,a=i*2.4;n.x=W/2+Math.cos(a)*ring*R*1.15;n.y=H/2+Math.sin(a)*ring*R});
+
+  function step(){
+    if(mode!=='organic'){N.forEach(n=>{if(n!==drag&&n.tx!=null){n.x+=(n.tx-n.x)*.12;n.y+=(n.ty-n.y)*.12}});return}
+    if(alpha<.015)return; alpha*=.992;
+    for(let i=0;i<N.length;i++) for(let j=i+1;j<N.length;j++){
+      const a=N[i],b=N[j];let dx=a.x-b.x,dy=a.y-b.y,d=dx*dx+dy*dy+.1,f=9500/d*alpha;const m=Math.sqrt(d);
+      dx=dx/m*f;dy=dy/m*f;a.vx+=dx;a.vy+=dy;b.vx-=dx;b.vy-=dy;
+    }
+    E.forEach(([s,t])=>{const a=N[I[s]],b=N[I[t]];if(!a||!b)return;let dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy)||1,L=(a.t==='me'||b.t==='me')?(W<600?110:175):(W<600?95:150),f=(d-L)*.012;
+      dx=dx/d*f;dy=dy/d*f;a.vx+=dx;a.vy+=dy;b.vx-=dx;b.vy-=dy});
+    N.forEach(n=>{n.vx+=(W/2-n.x)*.0007;n.vy+=(H/2-n.y)*.0007;if(n!==drag){n.x+=n.vx;n.y+=n.vy}n.vx*=.82;n.vy*=.82;n.x=Math.max(30,Math.min(W-30,n.x));n.y=Math.max(46,Math.min(H-40,n.y))});
+  }
+
+  function act(id){if(!sel)return true;if(id===sel)return true;const s=N[I[sel]];if(nb(sel).includes(id))return true;if(s.t==='role'&&(id==='me'||id==='you'))return true;return false}
+
+  const GL={you:'?',me:'M',role:'◎',proj:'▣',cert:'✓',org:'⌂'};
+  const rad=n=>n.t==='me'?27:n.t==='role'?20:n.t==='you'?18:(n.img?18:15);
+  let mode='organic';
+
+  function layout(m){mode=m;alpha=.5;const Rc=Math.min(W,H),cx=W/2,cy=H/2,gp={};N.forEach(n=>(gp[n.t]=gp[n.t]||[]).push(n));
+    if(m==='circular'){const ring=(a,r,off)=>a.forEach((n,i)=>{const g=off+i/a.length*6.283;n.tx=cx+Math.cos(g)*r;n.ty=cy+Math.sin(g)*r});
+      gp.me[0].tx=cx;gp.me[0].ty=cy;ring(gp.role||[],Rc*.19,-1.57);ring(gp.proj||[],Rc*.33,-1.2);ring((gp.org||[]).concat(gp.cert||[]),Rc*.43,-1.4);if(gp.you)gp.you[0].tx=cx,gp.you[0].ty=cy-Rc*.43;
+    } else if(m==='tree'){const row=(a,y)=>a.forEach((n,i)=>{n.tx=W*(i+1)/(a.length+1);n.ty=H*y+(a.length>6&&i%2?24:0)});
+      row(gp.you||[],.09);row(gp.me||[],.22);row(gp.role||[],.38);row(gp.proj||[],.62);row((gp.org||[]).concat(gp.cert||[]),.88);}
+  }
+  addEventListener('resize',()=>mode!=='organic'&&layout(mode));
+  document.querySelectorAll('#tb button').forEach(b=>b.onclick=()=>{layout(b.dataset.m);document.querySelectorAll('#tb button').forEach(z=>z.classList.toggle('on',z===b))});
+
+  function draw(now){cssv=getComputedStyle(document.documentElement);step();tick=now/40;const g=k=>cssv.getPropertyValue(k).trim();
+    ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);const S=sel?N[I[sel]]:null;
+    E.forEach(([s,t,lab])=>{const a=N[I[s]],b=N[I[t]];if(!a||!b)return;const on=S&&(s===sel||t===sel||(S.t==='role'&&s==='you'&&t==='me'));
+      ctx.globalAlpha=Math.min(a.a,b.a)*(S?(on?1:.06):.6);
+      const dx=b.x-a.x,dy=b.y-a.y,qx=(a.x+b.x)/2-dy*.1,qy=(a.y+b.y)/2+dx*.1,c=on?g('--'+(S.t==='me'?'role':S.t)):g('--edge');
+      ctx.strokeStyle=c;ctx.lineWidth=on?2.2:1.2;ctx.setLineDash(on?[8,5]:[]);ctx.lineDashOffset=-tick;
+      ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.quadraticCurveTo(qx,qy,b.x,b.y);ctx.stroke();ctx.setLineDash([]);
+      const an=Math.atan2(b.y-qy,b.x-qx),rr=rad(b)+4,ax=b.x-Math.cos(an)*rr,ay=b.y-Math.sin(an)*rr;
+      ctx.fillStyle=c;ctx.beginPath();ctx.moveTo(ax,ay);ctx.lineTo(ax-Math.cos(an-.45)*9,ay-Math.sin(an-.45)*9);ctx.lineTo(ax-Math.cos(an+.45)*9,ay-Math.sin(an+.45)*9);ctx.fill();
+      if(on){const mx=.25*a.x+.5*qx+.25*b.x,my=.25*a.y+.5*qy+.25*b.y;ctx.font='10px var(--m)';const w=ctx.measureText(lab).width+12;
+        ctx.fillStyle=g('--pan');ctx.beginPath();ctx.roundRect(mx-w/2,my-9,w,18,9);ctx.fill();ctx.strokeStyle=c;ctx.lineWidth=1;ctx.stroke();
+        ctx.fillStyle=g('--ink');ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(lab,mx,my+.5);ctx.textBaseline='alphabetic'}
+    });
+
+    N.forEach(n=>{
+      const on=act(n.id),r=rad(n),c=n.t==='me'?g('--me'):g('--'+n.t);
+      ctx.globalAlpha=n.a*(on?1:.14);
+      if(on&&(n.id===sel||n.t==='me')){ctx.shadowColor=c;ctx.shadowBlur=26}
+      ctx.fillStyle=g('--pan');ctx.beginPath();ctx.arc(n.x,n.y,r,0,7);ctx.fill();ctx.lineWidth=3;ctx.strokeStyle=c;ctx.stroke();ctx.shadowBlur=0;
+      if(n.id===sel){ctx.lineWidth=1;ctx.beginPath();ctx.arc(n.x,n.y,r+7,0,7);ctx.stroke()}
+
+      // Draw actual company / cert image inside node if loaded
+      if (nodeImages[n.id]) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, r-2, 0, Math.PI*2);
+        ctx.clip();
+        ctx.fillStyle = '#ffffff';
+        ctx.fill();
+        ctx.drawImage(nodeImages[n.id], n.x - r + 3, n.y - r + 3, (r - 3)*2, (r - 3)*2);
+        ctx.restore();
+      } else {
+        ctx.fillStyle=c;
+        ctx.font='700 '+Math.round(r*.9)+'px var(--m)';
+        ctx.textAlign='center';
+        ctx.textBaseline='middle';
+        ctx.fillText(GL[n.t],n.x,n.y+1);
+        ctx.textBaseline='alphabetic';
+      }
+
+      ctx.font=(n.t==='me'||n.t==='role'?'700 13px':'11px')+' var(--f)';const lb=n.l.replace(/&amp;/g,'&');
+      ctx.lineWidth=4;ctx.strokeStyle=g('--bg');ctx.strokeText(lb,n.x,n.y+r+15);ctx.fillStyle=g('--ink');ctx.fillText(lb,n.x,n.y+r+15);
+    });
+    ctx.globalAlpha=1;requestAnimationFrame(draw);
+  }
+
+  const stages=["[*] collecting identity…","[+] "+N.filter(n=>n.t==='role').length+" roles mapped","[+] "+N.filter(n=>n.t==='proj').length+" projects, "+N.filter(n=>n.t==='org').length+" internships","[+] "+N.filter(n=>n.t==='cert').length+" certifications validated","[✓] 0 false positives · graph ready"];
+  N.forEach((n,i)=>setTimeout(()=>{(function f(){n.a=Math.min(1,n.a+.08);if(n.a<1)requestAnimationFrame(f)})();if(i%5===0)lg.textContent=stages[Math.min((i/5)|0,3)]},180+i*95));
+  setTimeout(()=>lg.textContent=stages[4],180+N.length*95+400);
+
+  function hit(e){const r=cv.getBoundingClientRect(),px=e.clientX-r.left,py=e.clientY-r.top;return[...N].reverse().find(n=>Math.hypot(n.x-px,n.y-py)<22&&n.a>.5)||null}
+  cv.addEventListener('pointerdown',e=>{const n=hit(e);moved=0;if(n){drag=n;cv.setPointerCapture(e.pointerId);cv.style.cursor='grabbing'}});
+  cv.addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();if(drag){moved++;drag.x=e.clientX-r.left;drag.y=e.clientY-r.top;alpha=.35}else cv.style.cursor=hit(e)?'pointer':'grab'});
+  cv.addEventListener('pointerup',e=>{const n=drag;drag=null;cv.style.cursor='grab';if(n&&moved<4)pick(n.id);else if(!n)pick(null)});
+
+  const TL={me:'Candidate',role:'Role',proj:'Project',cert:'Certification',org:'Internship',you:'Recruiter'};
+  function pick(id){sel=id;alpha=Math.max(alpha,.1);panel()}
+
+  function panel(){
+    const links=[
+      `<a href="mailto:${meta.email}"><span>Email Mohamed</span><span>→</span></a>`,
+      `<a href="${meta.linkedin}" target="_blank" rel="noopener"><span>LinkedIn</span><span>↗</span></a>`,
+      `<a href="${meta.github}" target="_blank" rel="noopener"><span>GitHub</span><span>↗</span></a>`,
+      `<a href="tel:${meta.phone}"><span>${meta.phone_display}</span><span>☎</span></a>`
+    ].join('');
+    const n=sel?N[I[sel]]:N[I['me']];
+    const c=n.t==='me'?'var(--role)':`var(--${n.t})`;
+    let body=`<span class="tag" style="background:${c}">${TL[n.t]}</span><h2>${n.l}</h2><p>${n.d}</p>`;
+
+    // If project is clicked, offer link to open full project detail page
+    if (n.t === 'proj') {
+      body += `<a href="project.html?id=${n.id}" class="vbtn" style="background:${c};margin:8px 0 14px;text-align:center;justify-content:center">↗ Open Full Project Page &amp; Media</a>`;
+    }
+
+    if(!sel) body+=`<div class="path">Tap a <b style="color:var(--role)">pink role</b> to see exactly which projects, internships and certs prove it.</div>`;
+    else{
+      if(n.t==='role'){const m=nb(n.id).filter(i=>i!=='me');body+=`<div class="path">PATH FOUND<br>You → Mohamed → ${n.l}<br>${m.length} pieces of evidence below</div>`}
+      const list=nb(n.id);
+      body+=`<div style="font:700 11px var(--m);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)">Connected to</div><div class="nb">${list.map(i=>`<button onclick="document.dispatchEvent(new CustomEvent('gp',{detail:'${i}'}))">${N[I[i]].l}</button>`).join('')}</div>`;
+    }
+    pn.innerHTML=body+`<div class="ct">${links}</div>`;
+  }
+  document.addEventListener('gp',e=>pick(e.detail));
+  pick(null); requestAnimationFrame(draw);
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  BOOTSTRAP — load static data or JSON then render
+// ═══════════════════════════════════════════════════════════════
+function loadData() {
+  if (window.PORTFOLIO_DATA) return Promise.resolve(window.PORTFOLIO_DATA);
+  return fetch('portfolio.json')
+    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    .catch(err => {
+      if (window.PORTFOLIO_DATA) return window.PORTFOLIO_DATA;
+      throw err;
+    });
+}
+
+loadData()
+  .then(D => {
+    META = D.meta;
+    renderHeader(D.meta);
+    renderExperience(D.experience);
+    renderProjects(D.projects);
+    renderStack(D.stack);
+    renderCerts(D.certifications);
+    renderEducation(D.education, D.awards);
+    renderFooter(D.meta);
+    setupInteractions();
+    initGraph(D.graph, D.meta);
+  })
+  .catch(err => {
+    document.body.innerHTML = `<div style="padding:60px 40px;font-family:monospace;max-width:600px;margin:0 auto">
+      <h2 style="color:#ff4d4d;margin-bottom:12px">⚠ Could not load portfolio data</h2>
+      <p style="color:#7e8397">${err}</p>
+    </div>`;
+  });
+</script>
+</body>
+</html>

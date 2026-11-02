@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shortest path to hire Mohamed El Mahdaoui</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#07080d;--pan:#0e1018;--ink:#e8eaf3;--dim:#7e8397;--line:#222637;--edge:#3a4060;
+--me:#ffffff;--role:#ff2e93;--proj:#27d3ff;--cert:#ffb020;--org:#9b7bff;--you:#ff4d4d}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#eef0f6;--pan:#fff;--ink:#12141f;--dim:#60667c;--line:#d5d9e6;--edge:#9aa1bd;--me:#12141f;--role:#e0126f;--proj:#0a8fb8;--cert:#c27a00;--org:#6b44e6;--you:#d62020}}
+:root[data-theme="light"]{--bg:#eef0f6;--pan:#fff;--ink:#12141f;--dim:#60667c;--line:#d5d9e6;--edge:#9aa1bd;--me:#12141f;--role:#e0126f;--proj:#0a8fb8;--cert:#c27a00;--org:#6b44e6;--you:#d62020}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Helvetica,Arial,sans-serif;min-height:100%}
+.mono{font:11px ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase}
+header{max-width:1200px;margin:0 auto;padding:22px 18px 6px}
+header .top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--dim)}
+.ok{color:#2fe39a}
+h1{font:800 clamp(34px,6.4vw,76px)/1 Helvetica,Arial,sans-serif;letter-spacing:-.045em;margin:26px 0 10px}
+h1 span{color:var(--role)}
+.sub{max-width:640px;color:var(--dim);margin:0 0 6px}
+.app{max-width:1200px;margin:14px auto 0;padding:0 18px 70px;display:grid;grid-template-columns:1fr 340px;gap:14px}
+.cv{position:relative;border:1px solid var(--line);border-radius:14px;background:radial-gradient(circle at 50% 45%,color-mix(in oklab,var(--role) 9%,var(--bg)),var(--bg) 70%);height:640px;overflow:hidden}
+canvas{width:100%;height:100%;display:block;touch-action:pan-y;cursor:grab}
+.log{position:absolute;left:12px;bottom:10px;right:12px;color:var(--dim);pointer-events:none}
+.leg{position:absolute;left:12px;top:10px;display:flex;gap:12px;flex-wrap:wrap;color:var(--dim);pointer-events:none}
+.leg i{display:inline-block;width:9px;height:9px;margin-right:5px;border-radius:2px}
+.pan{border:1px solid var(--line);border-radius:14px;background:var(--pan);padding:20px;display:flex;flex-direction:column;gap:12px;height:640px;overflow:auto}
+.pan h2{font:800 28px/1.1 Helvetica,Arial,sans-serif;letter-spacing:-.03em;margin:0}
+.pan p{margin:0;color:var(--dim);font-size:15px}
+.tag{display:inline-block;padding:2px 8px;border-radius:5px;color:#07080d;font-weight:700;width:fit-content}
+.path{font:12px/1.6 ui-monospace,Menlo,monospace;color:var(--ink);border-left:3px solid var(--role);padding-left:10px}
+.nb{display:flex;flex-wrap:wrap;gap:6px}
+.nb button{font:inherit;font-size:13px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:7px;padding:4px 9px;cursor:pointer}
+.nb button:hover{border-color:var(--role)}
+.ct{margin-top:auto;display:grid;gap:6px}
+.ct a{color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:9px;padding:9px 12px;font-size:14px;display:flex;justify-content:space-between}
+.ct a:first-child{background:var(--role);border-color:var(--role);color:#fff;font-weight:700}
+@media(max-width:860px){.app{grid-template-columns:1fr}.cv{height:520px}.pan{height:auto}}
+
+.cv{background:radial-gradient(circle,var(--line) 1px,transparent 1.6px) 0 0/26px 26px,radial-gradient(circle at 50% 45%,color-mix(in oklab,var(--role) 9%,var(--bg)),var(--bg) 70%)}
+.leg{max-width:55%}
+.tb{position:absolute;right:10px;top:10px;display:flex;gap:4px;background:var(--pan);border:1px solid var(--line);border-radius:9px;padding:3px}
+.tb button{font:inherit;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);background:none;border:0;border-radius:6px;padding:6px 9px;cursor:pointer}
+.tb button.on{background:var(--role);color:#fff}
+#classic{max-width:1000px;margin:0 auto;padding:30px 18px 90px;border-top:1px solid var(--line)}
+#classic h2.big{font:800 clamp(30px,5vw,48px)/1.05 Helvetica,Arial,sans-serif;letter-spacing:-.04em;margin:0 0 6px}
+.rw{display:grid;grid-template-columns:170px 1fr;gap:10px 28px;padding:26px 0;border-top:1px solid var(--line)}
+.rw>.mono{color:var(--role);padding-top:4px}
+.it{margin-bottom:20px}.it b{font-size:18px}.it .m{color:var(--dim);font-size:14px}.it ul{margin:6px 0 0;padding-left:18px}.it li{margin:3px 0}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.pc{border:1px solid var(--line);border-radius:10px;padding:14px;background:var(--pan)}.pc b{display:block;margin-bottom:4px}.pc p{margin:0;color:var(--dim);font-size:14px}
+.sk{display:grid;grid-template-columns:150px 1fr;gap:6px 14px;font-size:15px}.sk b{color:var(--dim);font-weight:600}
+@media(max-width:700px){.rw{grid-template-columns:1fr}.sk{grid-template-columns:1fr}}
+
+.cv,.pan{height:720px}
+.rw>.mono::before{content:"// ";opacity:.6}
+.pg{display:block}
+.pr{display:grid;grid-template-columns:72px 1fr;gap:12px;padding:18px 0;border-top:1px solid var(--line)}
+.pr:first-child{border-top:0;padding-top:0}
+.pr .mono{color:var(--proj);padding-top:6px}
+.pr b{font-size:20px;letter-spacing:-.02em;transition:color .2s}
+.pr p{margin:3px 0 0;color:var(--dim)}
+.pr:hover b{color:var(--proj)}
+.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:26px}
+.tl .it{position:relative}
+.tl .it::before{content:"";position:absolute;left:-35px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:3px solid var(--role)}
+.sk b::before{content:"▸ ";color:var(--role)}
+.sk b{white-space:nowrap}
+@media(max-width:860px){.cv{height:600px}.pan{height:auto}}
+@media(max-width:700px){.pr{grid-template-columns:1fr;gap:2px}.pr .mono{padding-top:0}}
+
+.gt{background:linear-gradient(90deg,var(--role),var(--proj),var(--cert));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;margin:34px 0 0}
+.stats div{border-left:3px solid var(--role);padding-left:14px}.stats div:nth-child(2){border-color:var(--proj)}.stats div:nth-child(3){border-color:var(--cert)}.stats div:nth-child(4){border-color:var(--org)}.stats div:nth-child(5){border-color:#2fe39a}
+.stats big{display:block;font:800 clamp(36px,5vw,58px)/1 Helvetica,Arial,sans-serif;letter-spacing:-.045em}.stats span{color:var(--dim);font-size:13px}
+.xh{margin:70px 0 16px;color:var(--role)}
+.xi{animation:xin .45s both}@keyframes xin{from{opacity:0;transform:translateY(8px)}}.xi.off{display:none}
+.xr{position:relative;display:grid;grid-template-columns:60px 1fr auto;gap:18px;align-items:center;padding:16px 12px;border-top:1px solid var(--line);cursor:pointer;border-radius:12px;overflow:hidden;outline:0}
+.xr::before{content:"";position:absolute;inset:0;background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),color-mix(in oklab,var(--c) 20%,transparent),transparent 70%);opacity:0;transition:opacity .25s;pointer-events:none}
+.xr:hover::before,.xr:focus-visible::before{opacity:1}
+.bd{width:56px;height:56px;border-radius:15px;display:grid;place-items:center;font:800 17px ui-monospace,Menlo,monospace;color:#fff;background:linear-gradient(135deg,var(--c),color-mix(in oklab,var(--c) 50%,#000));box-shadow:0 8px 20px color-mix(in oklab,var(--c) 38%,transparent);position:relative;overflow:hidden;flex:none}
+.bd::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.4) 50%,transparent 65%);transform:translateX(-110%);transition:transform .8s}
+.xr:hover .bd::after,.cw:hover .bd::after{transform:translateX(110%)}
+.xr h4{margin:0;font:700 clamp(18px,2.4vw,23px)/1.2 Helvetica,Arial,sans-serif;letter-spacing:-.025em}
+.xr .m{color:var(--dim);font-size:14px;margin-top:2px}.tgs{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px;font:11px ui-monospace,Menlo,monospace;letter-spacing:.06em}
+.pl{font-size:30px;line-height:1;color:var(--dim);transition:transform .35s,color .2s;position:relative}.xr.open .pl{transform:rotate(45deg);color:var(--c)}
+.xd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.3,.8,.3,1)}.xd.open{grid-template-rows:1fr}.xd>div{overflow:hidden}
+.xdi{padding:4px 12px 26px 90px}.xdi ul{margin:0 0 14px;padding-left:18px}.xdi li{margin:5px 0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-bottom:16px}.cols .mono{color:var(--c);display:block;margin-bottom:4px}.cols p{margin:0;color:var(--dim);font-size:15px}
+.chs{display:flex;flex-wrap:wrap;gap:8px}
+.ch{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:99px;padding:3px 12px 3px 4px;font-size:13px;transition:border-color .2s,transform .2s}.ch:hover{border-color:var(--c);transform:translateY(-2px)}
+.ch i{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font:700 9px ui-monospace,Menlo,monospace;color:#fff;font-style:normal;background:var(--c)}
+.fl{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.fl button{font:inherit;font-size:14px;font-weight:700;color:var(--ink);background:transparent;border:1.5px solid var(--line);border-radius:99px;padding:7px 16px;cursor:pointer;transition:.2s}
+.fl button:hover{border-color:var(--c,var(--role))}.fl button.on{background:var(--c,var(--role));border-color:var(--c,var(--role));color:#fff}.fl sup{opacity:.7;margin-left:5px;font-size:11px}
+.sg{display:grid;grid-template-columns:170px 1fr;gap:10px 24px;padding:16px 0;border-top:1px solid var(--line);align-items:start}.sg .mono{padding-top:6px}
+.wall{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:6px 28px}
+.cw{display:flex;gap:14px;align-items:center;padding:12px 0;border-top:1px solid var(--line);position:relative}.cw .bd{width:46px;height:46px;border-radius:12px;font-size:14px}.cw b{display:block;font-size:15px;line-height:1.25}.cw span{color:var(--dim);font-size:13px}
+.fin{margin-top:90px;text-align:center}.fin h2{font:800 clamp(34px,6vw,64px)/1.02 Helvetica,Arial,sans-serif;letter-spacing:-.04em;margin:0 0 10px}.fin .sub{margin:0 auto 24px}
+.fb{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.fb a{color:var(--ink);text-decoration:none;border:1.5px solid var(--line);border-radius:99px;padding:11px 22px;font-weight:700;transition:.2s}.fb a:hover{border-color:var(--role);transform:translateY(-2px)}.fb a.p{background:linear-gradient(90deg,var(--role),var(--org));border-color:transparent;color:#fff}
+@media(max-width:700px){.xdi{padding-left:12px}.sg{grid-template-columns:1fr}.xr{grid-template-columns:48px 1fr auto;gap:12px}.bd{width:48px;height:48px}}
+</style></head><body>
+<header><div class="top mono"><span>Mohamed El Mahdaoui · IT Security &amp; AI</span><span class="ok">● Open to PFE internship · 6 months · Morocco</span></div>
+<h1>Find the shortest<br>path to <span>hire me.</span></h1>
+<p class="sub">An attack-path graph, but for hiring. Every node is real evidence. Tap a role to light up the path. Drag nodes. Tap anything. <a href="#classic" style="color:var(--role)">Prefer a classic CV? ↓</a></p></header>
+<div class="app"><div class="cv"><canvas id="c"></canvas>
+<div class="leg mono"><span><i style="background:var(--you)"></i>You</span><span><i style="background:var(--role)"></i>Role</span><span><i style="background:var(--proj)"></i>Project</span><span><i style="background:var(--cert)"></i>Cert</span><span><i style="background:var(--org)"></i>Org</span></div>
+<div class="tb" id="tb"><button class="on" data-m="organic">Organic</button><button data-m="circular">Circular</button><button data-m="tree">Hierarchy</button></div><div class="log mono" id="lg"></div></div>
+<aside class="pan" id="pn"></aside></div>
+<section id="classic">
+<h2 class="big">The classic <span class="gt">version.</span></h2>
+<p class="sub">Fifth-year IT Security &amp; AI engineering student at Université Cadi Ayyad. I build detection, response and zero-trust systems and test them against real attacks. Click any row to open it.</p>
+<div class="stats" id="stats"></div>
+<div class="xh mono">// Experience</div><div id="xexp"></div>
+<div class="xh mono">// Projects</div><div class="fl" id="fl"></div><div id="xpr"></div>
+<div class="xh mono">// Stack</div><div id="xsk"></div>
+<div class="xh mono">// Certifications</div><div class="wall" id="xct"></div>
+<div class="xh mono">// Education &amp; awards</div><div id="xed"></div>
+<div class="fin"><h2>Let's build something <span class="gt">secure.</span></h2><p class="sub">Open to a 6-month end-of-studies internship (PFE). Morocco: Marrakech, Casablanca, Rabat.</p>
+<div class="fb"><a class="p" href="mailto:mehdaoui200309@gmail.com">Email me</a><a href="https://linkedin.com/in/mohamed-el-mahdaoui-3434b7246/">LinkedIn</a><a href="https://github.com/someone2042">GitHub</a><a href="tel:+212642714214">+212 6 42 71 42 14</a></div></div>
+</section>
+<script>
+const N=[
+["you","you","You (recruiter)","The person with an open internship slot. You are one hop away."],
+["me","me","Mohamed","5th-year engineering student, IT Security &amp; AI. 3 internships, 1st place at SKILL'UP 2026, CompTIA Security+. Languages: Arabic, French, English."],
+["soc","role","SOC / Detection","Detection pipeline built end to end and tested on live malware."],
+["ai","role","AI SecOps","Agents with auditable reasoning and explainable anomaly scoring."],
+["cloud","role","Cloud &amp; Zero Trust","Access designed so servers expose no inbound ports."],
+["off","role","Offensive / AppSec","Real vulnerability disclosed, IoT rooted in the lab."],
+["grc","role","GRC &amp; OT","Controls mapped to frameworks and law, plus OT/ICS security."],
+["lucid","proj","Lucid SOC","LangGraph AI analyst that investigates alerts, queries the SIEM, enriches IoCs and isolates hosts. Every thought is logged. Isolated live Lumma Stealer in 4 seconds."],
+["sba","proj","Anomaly Engine","Isolation Forest on streaming log templates, SHAP explanations, and a Mark-as-Normal feedback loop."],
+["zt","proj","Zero-Trust Lab","AWS EC2 with 0 inbound rules behind a Cloudflare Tunnel, Entra ID identity and device posture checks."],
+["purple","proj","Purple Team AD Lab","BadBlood-populated Active Directory attacked with Atomic Red Team, defended with Wazuh, Suricata, Zeek and Sysmon."],
+["ros","proj","Responsible Disclosure","GraphQL client-side validation bypass (CWE-602), exploited with Burp rules, 9-page report with fixes."],
+["tv","proj","Smart TV Red Team","Exposed ADB to root shell, LAN pivot and session-token theft showing 2FA bypass."],
+["aws","proj","AWS Secrets Monitor","CloudTrail to CloudWatch to SNS alerting on suspicious secret access."],
+["qual","proj","Qualys VMDR (1st place)","Architect on the winning SKILL'UP 2026 team: vuln and compliance design, SOAR playbooks, 5-year cost analysis."],
+["law","proj","Cyberlaw Study","Moroccan Law 05-20 and 09-08, French law and GDPR mapped to technical controls."],
+["ocd","org","Orange Cyberdefense","Security Engineering Intern, Casablanca, Jul–Sep 2026."],
+["cas","org","Casanet","SOC Analyst Intern (Maroc Telecom), Rabat, 2025. Correlation and DFIR."],
+["web","org","webagency-maroc","Full-stack and AppSec intern, 2024. OWASP-aligned, hardened Linux."],
+["sec","cert","Security+","CompTIA, Dec 2025."],["otse","cert","OPSWAT OTSE","OT security expert, Aug 2025."],
+["fca","cert","Fortinet FCA","FortiGate NGFW, VPN, filtering. Mar 2025."],["ceh","cert","Cisco Ethical Hacker","Pentest lifecycle. Feb 2025."]
+].map(a=>({id:a[0],t:a[1],l:a[2],d:a[3],a:0}));
+const I=Object.fromEntries(N.map((n,i)=>[n.id,i]));
+const E=[["you","me","CanHire"]].concat(["soc","ai","cloud","off","grc"].map(r=>["me",r,"CanFill"]),
+[["me","ocd","InternedAt"],["me","cas","InternedAt"],["me","web","InternedAt"],
+["soc","lucid","ProvenBy"],["soc","sba","ProvenBy"],["soc","purple","ProvenBy"],["soc","aws","ProvenBy"],["ai","lucid","ProvenBy"],["ai","sba","ProvenBy"],
+["cloud","zt","ProvenBy"],["cloud","aws","ProvenBy"],["cloud","qual","ProvenBy"],["off","ros","ProvenBy"],["off","tv","ProvenBy"],["off","purple","ProvenBy"],
+["grc","qual","ProvenBy"],["grc","law","ProvenBy"],["ocd","lucid","BuiltAt"],["ocd","sba","BuiltAt"],["ocd","zt","BuiltAt"],["cas","soc","ExperienceIn"],["web","off","ExperienceIn"],
+["sec","soc","Validates"],["sec","grc","Validates"],["otse","grc","Validates"],["fca","cloud","Validates"],["ceh","off","Validates"]]);
+const cv=document.getElementById('c'),x=cv.getContext('2d'),pn=document.getElementById('pn'),lg=document.getElementById('lg');
+let W,H,dpr,sel=null,drag=null,moved=0,alpha=1,tick=0,css;
+const nb=id=>E.filter(e=>e[0]==id||e[1]==id).map(e=>e[0]==id?e[1]:e[0]);
+function size(){const r=cv.getBoundingClientRect(),w=r.width,h=r.height;dpr=devicePixelRatio||1;cv.width=w*dpr;cv.height=h*dpr;
+ N.forEach(n=>{if(n.x!=null){n.x*=w/(W||w);n.y*=h/(H||h)}});W=w;H=h}
+size();addEventListener('resize',()=>{size();alpha=.4});
+const R=Math.min(W,H);
+N.forEach((n,i)=>{const ring=n.t=="me"?0:n.t=="role"?.22:n.t=="you"?.46:.38,a=i*2.4;
+ n.x=W/2+Math.cos(a)*ring*R*1.15;n.y=H/2+Math.sin(a)*ring*R;n.vx=n.vy=0});
+const col=t=>css.getPropertyValue('--'+(t=="me"?"me":t)).trim();
+function step(){if(mode!='organic'){N.forEach(n=>{if(n!==drag&&n.tx!=null){n.x+=(n.tx-n.x)*.12;n.y+=(n.ty-n.y)*.12}});return}if(alpha<.015)return;alpha*=.992;
+ for(let i=0;i<N.length;i++)for(let j=i+1;j<N.length;j++){const a=N[i],b=N[j];let dx=a.x-b.x,dy=a.y-b.y,d=dx*dx+dy*dy+.1,f=9500/d*alpha;const m=Math.sqrt(d);
+  dx=dx/m*f;dy=dy/m*f;a.vx+=dx;a.vy+=dy;b.vx-=dx;b.vy-=dy}
+ E.forEach(([s,t])=>{const a=N[I[s]],b=N[I[t]];let dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy)||1,L=(a.t=="me"||b.t=="me")?(W<600?110:175):(W<600?95:150),f=(d-L)*.012;
+  dx=dx/d*f;dy=dy/d*f;a.vx+=dx;a.vy+=dy;b.vx-=dx;b.vy-=dy});
+ N.forEach(n=>{n.vx+=(W/2-n.x)*.0007;n.vy+=(H/2-n.y)*.0007;if(n!==drag){n.x+=n.vx;n.y+=n.vy}n.vx*=.82;n.vy*=.82;
+  n.x=Math.max(30,Math.min(W-30,n.x));n.y=Math.max(46,Math.min(H-40,n.y))})}
+function act(id){if(!sel)return true;if(id==sel)return true;const s=N[I[sel]];if(nb(sel).includes(id))return true;
+ if(s.t=="role"&&(id=="me"||id=="you"))return true;return false}
+function shape(n,r){x.beginPath();
+ if(n.t=="proj")x.roundRect(n.x-r,n.y-r,2*r,2*r,4);
+ else if(n.t=="cert"){x.moveTo(n.x,n.y-r*1.2);x.lineTo(n.x+r*1.2,n.y);x.lineTo(n.x,n.y+r*1.2);x.lineTo(n.x-r*1.2,n.y);x.closePath()}
+ else if(n.t=="org"||n.t=="me"){for(let k=0;k<6;k++){const g=Math.PI/3*k+Math.PI/6;x.lineTo(n.x+Math.cos(g)*r*1.1,n.y+Math.sin(g)*r*1.1)}x.closePath()}
+ else x.arc(n.x,n.y,r,0,7)}
+let mode='organic';
+const GL={you:'?',me:'M',role:'◎',proj:'▣',cert:'✓',org:'⌂'};
+const rad=n=>n.t=='me'?27:n.t=='role'?20:n.t=='you'?18:15;
+function layout(m){mode=m;alpha=.5;const R=Math.min(W,H),cx=W/2,cy=H/2,gp={};N.forEach(n=>(gp[n.t]=gp[n.t]||[]).push(n));
+ if(m=='circular'){const ring=(a,r,off)=>a.forEach((n,i)=>{const g=off+i/a.length*6.283;n.tx=cx+Math.cos(g)*r;n.ty=cy+Math.sin(g)*r});
+  gp.me[0].tx=cx;gp.me[0].ty=cy;ring(gp.role,R*.19,-1.57);ring(gp.proj,R*.33,-1.2);ring(gp.org.concat(gp.cert),R*.43,-1.4);gp.you[0].tx=cx;gp.you[0].ty=cy-R*.43}
+ else if(m=='tree'){const row=(a,y)=>a.forEach((n,i)=>{n.tx=W*(i+1)/(a.length+1);n.ty=H*y+(a.length>6&&i%2?24:0)});
+  row(gp.you,.09);row(gp.me,.22);row(gp.role,.38);row(gp.proj,.62);row(gp.org.concat(gp.cert),.88)}}
+addEventListener('resize',()=>mode!='organic'&&layout(mode));
+document.querySelectorAll('#tb button').forEach(b=>b.onclick=()=>{layout(b.dataset.m);document.querySelectorAll('#tb button').forEach(z=>z.classList.toggle('on',z==b))});
+function draw(now){css=getComputedStyle(document.documentElement);step();tick=now/40;const g=k=>css.getPropertyValue(k).trim();
+ x.setTransform(dpr,0,0,dpr,0,0);x.clearRect(0,0,W,H);const S=sel?N[I[sel]]:null;
+ E.forEach(([s,t,lab])=>{const a=N[I[s]],b=N[I[t]],on=S&&(s==sel||t==sel||(S.t=='role'&&s=='you'&&t=='me'));
+  x.globalAlpha=Math.min(a.a,b.a)*(S?(on?1:.06):.6);
+  const dx=b.x-a.x,dy=b.y-a.y,qx=(a.x+b.x)/2-dy*.1,qy=(a.y+b.y)/2+dx*.1,c=on?g('--'+(S.t=='me'?'role':S.t)):g('--edge');
+  x.strokeStyle=c;x.lineWidth=on?2.2:1.2;x.setLineDash(on?[8,5]:[]);x.lineDashOffset=-tick;
+  x.beginPath();x.moveTo(a.x,a.y);x.quadraticCurveTo(qx,qy,b.x,b.y);x.stroke();x.setLineDash([]);
+  const an=Math.atan2(b.y-qy,b.x-qx),r=rad(b)+4,ax=b.x-Math.cos(an)*r,ay=b.y-Math.sin(an)*r;
+  x.fillStyle=c;x.beginPath();x.moveTo(ax,ay);x.lineTo(ax-Math.cos(an-.45)*9,ay-Math.sin(an-.45)*9);x.lineTo(ax-Math.cos(an+.45)*9,ay-Math.sin(an+.45)*9);x.fill();
+  if(on){const mx=.25*a.x+.5*qx+.25*b.x,my=.25*a.y+.5*qy+.25*b.y;x.font='10px ui-monospace,Menlo,monospace';const w=x.measureText(lab).width+12;
+   x.fillStyle=g('--pan');x.beginPath();x.roundRect(mx-w/2,my-9,w,18,9);x.fill();x.strokeStyle=c;x.lineWidth=1;x.stroke();
+   x.fillStyle=g('--ink');x.textAlign='center';x.textBaseline='middle';x.fillText(lab,mx,my+.5);x.textBaseline='alphabetic'}});
+ N.forEach(n=>{const on=act(n.id),r=rad(n),c=n.t=='me'?g('--me'):g('--'+n.t);x.globalAlpha=n.a*(on?1:.14);
+  if(on&&(n.id==sel||n.t=='me')){x.shadowColor=c;x.shadowBlur=26}
+  x.fillStyle=g('--pan');x.beginPath();x.arc(n.x,n.y,r,0,7);x.fill();x.lineWidth=3;x.strokeStyle=c;x.stroke();x.shadowBlur=0;
+  if(n.id==sel){x.lineWidth=1;x.beginPath();x.arc(n.x,n.y,r+7,0,7);x.stroke()}
+  x.fillStyle=c;x.font='700 '+Math.round(r*.9)+'px ui-monospace,Menlo,monospace';x.textAlign='center';x.textBaseline='middle';x.fillText(GL[n.t],n.x,n.y+1);x.textBaseline='alphabetic';
+  x.font=(n.t=='me'||n.t=='role'?'700 13px':'11px')+' Helvetica,Arial,sans-serif';const lb=n.l.replace(/&amp;/g,'&');
+  x.lineWidth=4;x.strokeStyle=g('--bg');x.strokeText(lb,n.x,n.y+r+15);x.fillStyle=g('--ink');x.fillText(lb,n.x,n.y+r+15)});
+ x.globalAlpha=1;requestAnimationFrame(draw)}
+// intro: SharpHound-style collection
+const stages=["[*] collecting identity…","[+] 5 roles mapped","[+] 9 projects, 3 internships","[+] 4 certifications validated","[✓] 0 false positives · graph ready"];
+N.forEach((n,i)=>setTimeout(()=>{(function f(){n.a=Math.min(1,n.a+.08);if(n.a<1)requestAnimationFrame(f)})();
+ if(i%5==0)lg.textContent=stages[Math.min(i/5|0,3)]},180+i*95));
+setTimeout(()=>lg.textContent=stages[4],180+N.length*95+400);
+function hit(e){const r=cv.getBoundingClientRect(),px=e.clientX-r.left,py=e.clientY-r.top;
+ return [...N].reverse().find(n=>Math.hypot(n.x-px,n.y-py)<22&&n.a>.5)||null}
+cv.addEventListener('pointerdown',e=>{const n=hit(e);moved=0;if(n){drag=n;cv.setPointerCapture(e.pointerId);cv.style.cursor="grabbing"}});
+cv.addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();if(drag){moved++;drag.x=e.clientX-r.left;drag.y=e.clientY-r.top;alpha=.35}else cv.style.cursor=hit(e)?"pointer":"grab"});
+cv.addEventListener('pointerup',e=>{const n=drag;drag=null;cv.style.cursor="grab";if(n&&moved<4)pick(n.id);else if(!n)pick(null)});
+const T={me:"Candidate",role:"Role",proj:"Project",cert:"Certification",org:"Internship",you:"Recruiter"};
+function pick(id){sel=id;alpha=Math.max(alpha,.1);panel()}
+function panel(){const c=[`<a href="mailto:mehdaoui200309@gmail.com"><span>Email Mohamed</span><span>→</span></a>`,`<a href="https://linkedin.com/in/mohamed-el-mahdaoui-3434b7246/"><span>LinkedIn</span><span>↗</span></a>`,`<a href="https://github.com/someone2042"><span>GitHub</span><span>↗</span></a>`,`<a href="tel:+212642714214"><span>+212 6 42 71 42 14</span><span>☎</span></a>`].join("");
+ const n=sel?N[I[sel]]:N[I.me];const col=n.t=="me"?"var(--role)":`var(--${n.t})`;
+ let body=`<span class="tag mono" style="background:${col}">${T[n.t]}</span><h2>${n.l}</h2><p>${n.d}</p>`;
+ if(!sel)body+=`<div class="path">Tap a <b style="color:var(--role)">pink role</b> to see exactly which projects, internships and certs prove it.</div>`;
+ else{if(n.t=="role"){const m=nb(n.id).filter(i=>i!="me");body+=`<div class="path">PATH FOUND<br>You → Mohamed → ${n.l}<br>${m.length} pieces of evidence below</div>`}
+  const list=nb(n.id);body+=`<div class="mono" style="color:var(--dim)">Connected to</div><div class="nb">${list.map(i=>`<button onclick="pick('${i}')">${N[I[i]].l}</button>`).join("")}</div>`}
+ pn.innerHTML=body+`<div class="ct">${c}</div>`}
+panel();requestAnimationFrame(draw);
+</script>
+<script>
+(()=>{
+const FD={soc:["SOC / Detection","#ff9500"],ai:["AI SecOps","#18c79a"],cloud:["Cloud & Zero Trust","#4d8dff"],off:["Offensive","#ff3b4e"],grc:["GRC & OT","#a566f5"]};
+const TC={Python:"#3776ab",FastAPI:"#009688",LangGraph:"#1c7c6c",Gemini:"#8e75ff",Wazuh:"#2f80ed",OpenSearch:"#005eb8",VirusTotal:"#394eff",PyOD:"#e4572e",SHAP:"#ff0051",Drain3:"#6c5ce7",Docker:"#2496ed","scikit-learn":"#f89939",Cloudflare:"#f38020",WARP:"#f38020","Entra ID":"#0078d4",CASB:"#7a5af8",VirtualBox:"#183a61",pfSense:"#212d6e",Suricata:"#e8532b",Zeek:"#1b7f9e",Sysmon:"#0078d4",CrowdSec:"#6e56cf","Atomic Red Team":"#d62828",BadBlood:"#b00020","Burp Suite":"#ff6633",GraphQL:"#e10098",React:"#149eca",ADB:"#3ddc84",Android:"#2fa866",Nmap:"#2a7ab0",SQLite:"#0f80cc",Qualys:"#ed2e26",ServiceNow:"#4aa83a",Azure:"#0078d4",Splunk:"#e0603a",Fortinet:"#ee3124",Cisco:"#1ba0d7",Zscaler:"#0076b6",Linux:"#e8a800",Java:"#e76f00","C/C++":"#00599c",Bash:"#4eaa25",PHP:"#777bb4",Laravel:"#ff2d20",JavaScript:"#d9b800",Oracle:"#c74634",GitLab:"#fc6d26","Active Directory":"#0078d4",Metasploit:"#2a6fbb",ServiceNow2:"#4aa83a"};
+const tc=n=>TC[n]||(/^AWS/.test(n)?"#ff9900":/Law|GDPR|ISO|NIST|CIS|PCI/.test(n)?"#4457c8":"#6b7280");
+const ab=n=>/^AWS/.test(n)?"AW":n.split(/[\s\-\/]+/).map(w=>w[0]).join("").slice(0,2).toUpperCase();
+const chip=n=>`<span class="ch" style="--c:${tc(n)}"><i>${ab(n)}</i>${n}</span>`;
+const $=i=>document.getElementById(i);
+const row=(c,b,t,m,tags,det,f)=>`<div class="xi" data-f="${f||""}" style="--c:${c}"><div class="xr" tabindex="0" role="button"><div class="bd">${b}</div><div><h4>${t}</h4><div class="m">${m}</div>${tags?`<div class="tgs">${tags}</div>`:""}</div><span class="pl">+</span></div><div class="xd"><div><div class="xdi">${det}</div></div></div></div>`;
+// stats
+const ST=[[4,"s","to isolate live malware"],[3,"","internships"],[1,"st","place, SKILL'UP 2026"],[9,"","security projects"],[8,"","certifications"]];
+$("stats").innerHTML=ST.map(a=>`<div><big data-n="${a[0]}" data-u="${a[1]}">0${a[1]}</big><span>${a[2]}</span></div>`).join("");
+document.querySelectorAll("#stats big").forEach(b=>{new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();const n=+b.dataset.n,t0=performance.now();(function f(t){const p=Math.min((t-t0)/900,1);b.textContent=Math.round(n*p)+b.dataset.u;if(p<1)requestAnimationFrame(f)})(t0)}),{threshold:.6}).observe(b)});
+// experience
+const XP=[["#ff7900","OCD","Security Engineering Intern","Orange Cyberdefense · Casablanca · Jul–Sep 2026",["soc","ai","cloud"],["Built Lucid SOC, a LangGraph AI analyst that investigates SIEM alerts and isolates hosts. Validated on live Lumma Stealer in 4 seconds.","Built an unsupervised anomaly engine (Isolation Forest, SHAP, Drain3) on Wazuh, Suricata and Sysmon telemetry.","Delivered a SASE / Zero Trust proof of concept and a Zscaler architecture study."],["Python","LangGraph","Wazuh","Suricata","Sysmon","Docker","Cloudflare","Zscaler"]],
+["#0b5cab","CN","SOC Analyst Intern","Casanet, Maroc Telecom · Rabat · Jul–Aug 2025",["soc"],["Applied event correlation rules and behavioral detection in an enterprise SOC.","Ran simulated attacks to practice triage, DFIR and multi-source log analysis across firewalls, IDS/IPS and Windows events."],["Fortinet","Suricata","Splunk","Windows"]],
+["#7c3aed","WA","Full-Stack Developer Intern, AppSec","webagency-maroc · Casablanca · Jul–Aug 2024",["off"],["Designed and shipped the admin platform used to manage all of the agency's client websites.","Applied OWASP Top 10 defenses against injection, broken access control and XSS, and hardened the Linux production servers."],["Laravel","PHP","JavaScript","Linux"]]];
+$("xexp").innerHTML=XP.map(x=>row(x[0],x[1],x[2],x[3],x[4].map(k=>`<span style="color:${FD[k][1]}">● ${FD[k][0]}</span>`).join(""),`<ul>${x[5].map(b=>`<li>${b}</li>`).join("")}</ul><div class="chs">${x[6].map(chip).join("")}</div>`)).join("");
+// projects
+const DET={lucid:["Analysts drown in alerts. The agent triages first and shows every thought so a human can audit it.","Isolated a live Lumma Stealer host in 4 seconds by correlating Suricata TLS SNI with Sysmon Event 3.",["Python","FastAPI","LangGraph","Gemini","Wazuh","OpenSearch","VirusTotal"]],
+sba:["Rules miss unknown behavior. A model scores each host 0 to 100 and explains why.","Analysts click Mark as Normal and the model retrains, so the same false positive does not return.",["PyOD","SHAP","Drain3","scikit-learn","Docker"]],
+zt:["Open ports invite reconnaissance, so the server exposes none.","0 inbound rules, browser-based SSH, device posture checks, DNS filtering and a GitHub CASB audit.",["AWS EC2","Cloudflare","WARP","Entra ID","CASB"]],
+purple:["Detections need a realistic, messy Active Directory to be tested against.","Detection rules engineered and tuned from Atomic Red Team adversary-emulation runs.",["VirtualBox","pfSense","Wazuh","Suricata","Zeek","Sysmon","CrowdSec","Atomic Red Team","BadBlood"]],
+ros:["The app computed answers in the browser and the server trusted the result (CWE-602).","A 9-page responsible disclosure report with a proof of concept and server-side validation fixes.",["Burp Suite","GraphQL","React"]],
+tv:["Measure the blast radius when one cheap IoT device is compromised.","Root shell, LAN pivot, Wi-Fi key and token theft, plus an awareness write-up with fixes.",["ADB","Android","Nmap","SQLite"]],
+aws:["Know the moment production credentials are touched.","Real-time email alerts on suspicious secret access, with immutable audit logs.",["AWS Secrets Manager","AWS CloudTrail","AWS CloudWatch","AWS S3","AWS SNS"]],
+qual:["A legacy scanner lacked compliance checks and ServiceNow integration.","1st place at SKILL'UP 2026: 6 modeled processes, SOAR playbooks, a 5-year cost-benefit analysis.",["Qualys","ServiceNow","Azure","BPMN","ArchiMate"]],
+law:["Technical controls need legal backing.","Encryption, retention, breach notification and DLP mapped to each legal mandate.",["Law 05-20","Law 09-08","GDPR","LPM"]]};
+const P=N.filter(n=>n.t=="proj");
+const fields=id=>E.filter(e=>e[1]==id&&N[I[e[0]]].t=="role").map(e=>e[0]);
+$("xpr").innerHTML=P.map(n=>{const fs=fields(n.id),c=FD[fs[0]][1],d=DET[n.id],mono=n.l.replace(/&amp;/g,"&").split(/[\s\-]+/).map(w=>w[0]).join("").slice(0,2).toUpperCase();
+ return row(c,mono,n.l,n.d.split(". ")[0].replace(/\.$/,""),fs.map(k=>`<span style="color:${FD[k][1]}">● ${FD[k][0]}</span>`).join(""),`<div class="cols"><div><span class="mono">Why it matters</span><p>${d[0]}</p></div><div><span class="mono">What I built</span><p>${n.d}</p></div><div><span class="mono">Outcome</span><p>${d[1]}</p></div></div><div class="chs">${d[2].map(chip).join("")}</div>`,fs.join(" "))}).join("");
+const items=[...document.querySelectorAll("#xpr .xi")];
+$("fl").innerHTML=`<button class="on" data-f="all">All<sup>${P.length}</sup></button>`+Object.keys(FD).map(k=>`<button data-f="${k}" style="--c:${FD[k][1]}">${FD[k][0]}<sup>${items.filter(i=>i.dataset.f.split(" ").includes(k)).length}</sup></button>`).join("");
+$("fl").onclick=e=>{const b=e.target.closest("button");if(!b)return;document.querySelectorAll("#fl button").forEach(z=>z.classList.toggle("on",z==b));const f=b.dataset.f;
+ items.forEach(i=>{const show=f=="all"||i.dataset.f.split(" ").includes(f);i.classList.toggle("off",!show);i.style.animation="none";i.offsetWidth;i.style.animation=""})};
+// stack
+const SK=[["SecOps",["Wazuh","OpenSearch","Suricata","Zeek","Sysmon","Splunk","CrowdSec"]],["Zero Trust & network",["Cloudflare","Zscaler","Fortinet","pfSense","Cisco"]],["Vuln, IAM & cloud",["Qualys","ServiceNow","Entra ID","AWS EC2","Azure","Docker","GitLab"]],["AI & automation",["Python","LangGraph","Gemini","PyOD","SHAP","FastAPI"]],["Offensive",["Burp Suite","Nmap","Metasploit","Atomic Red Team","Active Directory"]],["Code",["Python","Java","C/C++","Bash","PHP","Laravel","JavaScript","React","Oracle"]],["GRC",["ISO 27001","NIST","CIS v8","PCI-DSS","GDPR","Law 05-20"]]];
+$("xsk").innerHTML=SK.map(g=>`<div class="sg"><span class="mono" style="color:var(--dim)">${g[0]}</span><div class="chs">${g[1].map(chip).join("")}</div></div>`).join("");
+// certs
+const CT=[["#c8102e","S+","CompTIA Security+","Dec 2025 – Dec 2028"],["#0066cc","OP","OPSWAT OT Security Expert","Aug 2025"],["#0066cc","OP","OPSWAT Critical Infrastructure Protection","Aug 2025"],["#ee3124","FT","Fortinet Certified Associate","Mar 2025"],["#ee3124","FT","Fortinet Certified Fundamentals","Mar 2025"],["#1ba0d7","CS","Cisco Ethical Hacker","Feb 2025"],["#1ba0d7","CS","Cisco Intro to Cybersecurity","Mar 2025"],["#1ba0d7","CS","Cisco Networking Basics","Nov 2023"]];
+$("xct").innerHTML=CT.map(c=>`<div class="cw" style="--c:${c[0]}"><div class="bd">${c[1]}</div><div><b>${c[2]}</b><span>${c[3]}</span></div></div>`).join("");
+// education
+$("xed").innerHTML=[row("#f5b301","1st","1st place (IT), SKILL'UP 2026","EMAN Aerospace × Université Cadi Ayyad · May 2026",null,"<p>Security &amp; Telecom Architect in a 7-person Agile Kanban team. Designed the Qualys VMDR vulnerability and compliance solution for the university.</p>"),
+row("#0b6e4f","UCA","State Engineering Degree, IT Security","FST Marrakech · 2024–2027",null,"<p>Governance and risk, DevSecOps, incident response and forensics, cloud and blockchain security, banking and OT/ICS security, pentesting, cryptography, networks and systems.</p>"),
+row("#8c1d40","UH2","B.Sc. Mathematics &amp; Computer Science","Université Hassan II, Casablanca · 2021–2024",null,"<p>Algorithms, C/C++, 8086 assembly, compiler design, operating systems internals, networks, probability and statistics.</p>")].join("");
+// spotlight + toggle
+const cl=$("classic");
+cl.addEventListener("mousemove",e=>{const r=e.target.closest(".xr");if(!r)return;const b=r.getBoundingClientRect();r.style.setProperty("--mx",e.clientX-b.left+"px");r.style.setProperty("--my",e.clientY-b.top+"px")});
+const tg=r=>{r.classList.toggle("open");r.nextElementSibling.classList.toggle("open")};
+cl.addEventListener("click",e=>{const r=e.target.closest(".xr");if(r)tg(r)});
+cl.addEventListener("keydown",e=>{if(e.key=="Enter"&&e.target.classList.contains("xr"))tg(e.target)});
+})();
+</script>
+</body></html>

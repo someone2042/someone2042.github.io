@@ -1,0 +1,13 @@
+Budget Detailé,Phase,Coût RH,Coût Softs/Infra,Autres coûts,Maintenance,Total sans conting.,Contingence (10%),Total avec conting.
+,Faisabilité,221 840 MAD,2 000 MAD,1 500 MAD,0 MAD,225 340 MAD,22 534 MAD,247 874 MAD
+,Conception,364 374 MAD,39 000 MAD,2 000 MAD,1 000 MAD,406 374 MAD,40 637 MAD,447 011 MAD
+,Réalisation,622 733 MAD,345 000 MAD,5 000 MAD,14 000 MAD,986 733 MAD,98 673 MAD,1 085 406 MAD
+,Opérationnalisation,329 760 MAD,172 500 MAD,20 000 MAD,30 000 MAD,552 260 MAD,55 226 MAD,607 486 MAD
+,Total Projet,1 538 707 MAD,558 500 MAD,28 500 MAD,45 000 MAD,2 170 707 MAD,217 070 MAD,2 387 777 MAD
+,,,,,,,,
+Autre Cout,,,,,,,,
+,Autres coûts (MAD),Raison principal,,,,,,
+,1?500,"Préparation, documentation initiale",,,,,,
+,2?000,Prototypage et revues techniques,,,,,,
+,5?000,Appui technique et communication,,,,,,
+,"20,000",Formation & accompagnement du changement,,,,,,

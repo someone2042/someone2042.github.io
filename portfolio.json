@@ -1,0 +1,614 @@
+{
+  "meta": {
+    "name": "Mohamed El Mahdaoui",
+    "tagline": "IT Security & AI",
+    "status": "Open to PFE internship · 6 months · Morocco",
+    "status_open": true,
+    "subtitle": "Fifth-year IT Security & AI engineering student at Université Cadi Ayyad. I build detection, response and zero-trust systems and test them against real attacks.",
+    "email": "mehdaoui200309@gmail.com",
+    "phone": "+212642714214",
+    "phone_display": "+212 6 42 71 42 14",
+    "linkedin": "https://linkedin.com/in/mohamed-el-mahdaoui-3434b7246/",
+    "github": "https://github.com/someone2042",
+    "location": "Marrakech / Casablanca / Rabat, Morocco",
+    "languages": ["Arabic (Native)", "French (Fluent)", "English (Technical/Fluent)", "German (Basic)"]
+  },
+
+  "stats": [
+    { "value": 4, "unit": "s",  "label": "to isolate live malware" },
+    { "value": 3, "unit": "",   "label": "internships" },
+    { "value": 1, "unit": "st", "label": "place, SKILL'UP 2026" },
+    { "value": 12, "unit": "",  "label": "featured projects" },
+    { "value": 8, "unit": "",   "label": "certifications" }
+  ],
+
+  "experience": [
+    {
+      "id": "ocd",
+      "company": "Orange Cyberdefense",
+      "logo_image": "orange.svg",
+      "logo_domain": "orangecyberdefense.com",
+      "logo_fallback": "OCD",
+      "logo_bg": "#ff7900",
+      "role": "Security Engineering Intern",
+      "meta": "Orange Cyberdefense · Casablanca · Jul–Sep 2026",
+      "duration": "3 months",
+      "location": "Casablanca, Morocco (On-site)",
+      "domains": ["soc", "ai", "cloud"],
+      "bullets": [
+        "Built Lucid SOC, a LangGraph AI analyst that investigates SIEM alerts and isolates hosts. Validated on live Lumma Stealer in 4 seconds.",
+        "Built an unsupervised anomaly engine (Isolation Forest, SHAP, Drain3) on Wazuh, Suricata and Sysmon telemetry.",
+        "Delivered a SASE / Zero Trust proof of concept and a Zscaler architecture study."
+      ],
+      "stack": ["Python", "LangGraph", "Wazuh", "Suricata", "Sysmon", "Docker", "Cloudflare", "Zscaler"]
+    },
+    {
+      "id": "cas",
+      "company": "Casanet (Maroc Telecom)",
+      "logo_image": "casanet.jpg",
+      "logo_domain": "iam.ma",
+      "logo_fallback": "CN",
+      "logo_bg": "#0b5cab",
+      "role": "SOC Analyst Intern",
+      "meta": "Casanet, Maroc Telecom · Rabat · Jul–Aug 2025",
+      "duration": "2 months",
+      "location": "Rabat, Morocco (On-site)",
+      "domains": ["soc"],
+      "bullets": [
+        "Applied event correlation rules and behavioral detection in an enterprise SOC.",
+        "Ran simulated attacks to practice triage, DFIR and multi-source log analysis across firewalls, IDS/IPS and Windows events."
+      ],
+      "stack": ["Fortinet", "Suricata", "Splunk", "Windows"]
+    },
+    {
+      "id": "web",
+      "company": "webagency-maroc",
+      "logo_image": "webagency.png",
+      "logo_domain": "",
+      "logo_fallback": "WA",
+      "logo_bg": "#7c3aed",
+      "role": "Full-Stack Developer Intern, AppSec",
+      "meta": "webagency-maroc · Casablanca · Jul–Aug 2024",
+      "duration": "2 months",
+      "location": "Casablanca, Morocco (On-site)",
+      "domains": ["off"],
+      "bullets": [
+        "Designed and shipped the admin platform used to manage all of the agency's client websites.",
+        "Applied OWASP Top 10 defenses against injection, broken access control and XSS, and hardened the Linux production servers."
+      ],
+      "stack": ["Laravel", "PHP", "JavaScript", "Linux"]
+    }
+  ],
+
+  "projects": [
+    {
+      "id": "lucid",
+      "title": "Lucid SOC",
+      "tagline": "Autonomous LangGraph AI Analyst with Transparent Glass-Box Reasoning",
+      "short": "LangGraph AI analyst that investigates alerts, queries the SIEM, enriches IoCs and isolates hosts. Every thought is logged. Isolated live Lumma Stealer in 4 seconds.",
+      "domains": ["soc", "ai"],
+      "color": "#27d3ff",
+      "why": "Security Operations Centers drown in repetitive alerts, leading to alert fatigue and delayed incident response. Traditional playbooks lack autonomous multi-hop reasoning, while black-box LLMs cannot be audited.",
+      "what": "Architected an asynchronous event-driven SOAR/triage platform in Python and FastAPI. Implemented a LangGraph ReAct agent powered by Gemini 3.1 Flash Lite with glass-box transparency, serializing Thoughts, Actions, and Observations. Integrated with Wazuh SIEM, OpenSearch DSL queries, VirusTotal/AbuseIPDB caching, and automatic host containment via Wazuh REST API.",
+      "outcome": "Validated on live Lumma Stealer malware execution: correlated Suricata TLS SNI with Sysmon Event ID 3 network sockets and executed automated host isolation in 4 seconds.",
+      "architecture": "Event ingestion via Filebeat into Wazuh & OpenSearch -> Asynchronous FastAPI backend -> LangGraph ReAct Agent -> Contextual IoC Enrichment with SQLite caching -> Automated Wazuh REST API active response endpoint isolation.",
+      "highlights": [
+        "Glass-box explainability logging every LLM reasoning step for Tier-3 SOC auditing",
+        "Sub-second alert correlation across Suricata network telemetry and Sysmon process events",
+        "Automated active containment triggering Wazuh agent endpoint isolation in 4 seconds",
+        "Deterministic pre-LLM noise filtering preventing unnecessary token usage"
+      ],
+      "stack": ["Python", "FastAPI", "LangGraph", "Gemini", "Wazuh", "OpenSearch", "VirusTotal", "Docker"],
+      "github": "https://github.com/someone2042",
+      "report": "Lucid.pdf",
+      "video": "",
+      "images": [
+        "lucid (1).png",
+        "lucid (2).png",
+        "lucid (3).png",
+        "lucid (4).png",
+        "lucid (5).png",
+        "lucid (6).png",
+        "lucid (7).png",
+        "lucid (8).png",
+        "lucid (9).png",
+        "lucid (10).png",
+        "lucid (11).png"
+      ],
+      "built_at": "Orange Cyberdefense",
+      "year": "2026"
+    },
+    {
+      "id": "sba",
+      "title": "Anomaly Engine",
+      "tagline": "Unsupervised Behavioral Analytics with Drain3 Log Parsing & SHAP Explainability",
+      "short": "Isolation Forest on streaming log templates, SHAP explanations, and a Mark-as-Normal feedback loop.",
+      "domains": ["soc", "ai"],
+      "color": "#27d3ff",
+      "why": "Static detection rules consistently miss novel zero-day attack patterns and unknown anomalous behavior, while standard machine learning models produce unexplainable black-box alarms that analysts ignore.",
+      "what": "Containerized a continuous 5-minute unsupervised inference daemon with zero-downtime hot-reloading. Applied Drain3 streaming template mining to convert raw logs into frequency vectors, trained an Isolation Forest (IForest) with synthetic outlier injection, and integrated SHAP TreeExplainer for feature attribution.",
+      "outcome": "Analysts can inspect mathematical feature contributions for any anomaly score above 75. Clicking 'Mark as Normal' duplicates benign vectors 50x in scheduled retraining to permanently eliminate recurring false positives.",
+      "architecture": "Raw Wazuh archives -> Drain3 semantic log clustering -> 5-min sliding window vectorization -> PyOD Isolation Forest -> ECDF 0-100 score calibration -> SHAP TreeExplainer -> Closed-loop feedback retraining.",
+      "highlights": [
+        "Drain3 streaming log template mining strips dynamic variables (IPs, paths, GUIDs)",
+        "Empirical Cumulative Distribution Function (ECDF) score calibration to intuitive 0-100 percentiles",
+        "SHAP explainability translating feature vectors back into human-readable log templates",
+        "Human-in-the-loop retraining mechanism shifting decision trees to suppress false positives"
+      ],
+      "stack": ["PyOD", "SHAP", "Drain3", "scikit-learn", "Docker", "Python"],
+      "github": "https://github.com/someone2042",
+      "report": "SBA.pdf",
+      "video": "",
+      "images": [
+        "sba (1).png",
+        "sba (2).png",
+        "sba (3).png",
+        "sba (4).png",
+        "sba (5).png",
+        "sba (6).png",
+        "sba (7).png",
+        "sba (8).png",
+        "sba (9).png",
+        "sba (10).png",
+        "sba (11).png"
+      ],
+      "built_at": "Orange Cyberdefense",
+      "year": "2026"
+    },
+    {
+      "id": "zt",
+      "title": "Zero-Trust Lab",
+      "tagline": "Cloud-Native Gartner SASE / Zero Trust Architecture with 0 Inbound Attack Surface",
+      "short": "AWS EC2 with 0 inbound rules behind a Cloudflare Tunnel, Entra ID identity and device posture checks.",
+      "domains": ["cloud"],
+      "color": "#4d8dff",
+      "why": "Traditional perimeter firewalls and legacy VPNs grant broad network-level trust once authenticated, exposing enterprises to lateral movement and public port reconnaissance.",
+      "what": "Deployed an AWS EC2 Ubuntu production server with zero inbound firewall rules. Routed all access through an outbound-only Cloudflare Tunnel (`cloudflared`). Integrated Microsoft Entra ID as the IdP and configured Cloudflare WARP client posture checks, agentless browser-rendered SSH, Secure Web Gateway (SWG) DNS filtering, and GitHub SaaS API CASB audits.",
+      "outcome": "Eliminated 100% of exposed network ports against external port scanners while enforcing granular identity, MFA, and device health posture before granting micro-segmented application access.",
+      "architecture": "User Device (Cloudflare WARP Posture) -> Microsoft Entra ID (SAML/OIDC MFA) -> Cloudflare Edge & SWG -> Outbound Cloudflare Tunnel -> AWS EC2 (0 Inbound Security Group Rules).",
+      "highlights": [
+        "Zero inbound Security Group rules completely neutralizing external port scans and shodan discovery",
+        "Outbound-only bidirectional encrypted TLS tunnel brokering web and administrative traffic",
+        "Browser-rendered SSH gateway eliminating the need for exposed bastion hosts or SSH keys on endpoints",
+        "Automated SaaS CASB integration scanning GitHub repositories for posture drift"
+      ],
+      "stack": ["AWS EC2", "Cloudflare", "WARP", "Entra ID", "CASB", "Linux"],
+      "github": "https://github.com/someone2042",
+      "report": "zt.pdf",
+      "video": "",
+      "images": [
+        "zt (1).png",
+        "zt (2).png",
+        "zt (3).png",
+        "zt (4).png"
+      ],
+      "built_at": "Orange Cyberdefense",
+      "year": "2026"
+    },
+    {
+      "id": "purple",
+      "title": "Purple Team AD Lab",
+      "tagline": "Adversary Emulation in Active Directory Defended with Wazuh, Suricata & Sysmon",
+      "short": "BadBlood-populated Active Directory attacked with Atomic Red Team, defended with Wazuh, Suricata, Zeek and Sysmon.",
+      "domains": ["soc", "off"],
+      "color": "#ff2e93",
+      "why": "Security detection rules require a realistic, enterprise-scale Active Directory environment with messy background telemetry to properly tune high-fidelity detections and eliminate false positives.",
+      "what": "Constructed a multi-subnet virtualized enterprise lab isolated via pfSense router (WAN, LAN, DMZ). Populated Windows Server Active Directory with BadBlood (generating hundreds of users, groups, and ACLs). Executed MITRE ATT&CK test cases via Atomic Red Team and engineered multi-layer detections across Wazuh SIEM, Suricata NIDS, Zeek, and Sysmon.",
+      "outcome": "Engineered custom detection rules and behavioral signatures mapped to MITRE ATT&CK techniques, achieving high-confidence detection of Kerberoasting, Pass-the-Hash, and scheduled task persistence.",
+      "architecture": "pfSense segmented hypervisor lab -> Windows Domain Controller (Sysmon v13 + BadBlood) -> Kali Linux Attack Node (Atomic Red Team) -> Syslog-ng -> Wazuh Manager & Suricata NIDS.",
+      "highlights": [
+        "Automated BadBlood synthesis providing enterprise-like Active Directory complexity",
+        "Multi-layer defense telemetry fusing network packet inspection with kernel-level process events",
+        "Sysmon configuration specifically tuned for Event IDs 1, 3, 11, and 13",
+        "Continuous Purple Teaming feedback loop translating red team tradecraft into blue team rules"
+      ],
+      "stack": ["VirtualBox", "pfSense", "Wazuh", "Suricata", "Zeek", "Sysmon", "CrowdSec", "Atomic Red Team", "BadBlood"],
+      "github": "https://github.com/someone2042",
+      "report": "",
+      "video": "",
+      "images": [
+        "purple (1).jfif",
+        "purple (2).jfif"
+      ],
+      "built_at": "Personal Lab",
+      "year": "2025"
+    },
+    {
+      "id": "ros",
+      "title": "Responsible Disclosure",
+      "tagline": "Client-Side Validation Bypass (CWE-602) Discovery & Remediation on Rosetta Stone",
+      "short": "GraphQL client-side validation bypass (CWE-602), exploited with Burp rules, 9-page report with fixes.",
+      "domains": ["off"],
+      "color": "#ff3b4e",
+      "why": "Web applications that delegate authorization and test-evaluation logic to the client browser enable malicious actors to manipulate grades and bypass access controls.",
+      "what": "Conducted independent security research on the Rosetta Stone Fluency Builder platform. Discovered CWE-602 vulnerability where client-side React code transmitted test answers and score calculations to the GraphQL backend. Engineered Burp Suite Match & Replace regex rules demonstrating zero-touch automated score manipulation and authored a 9-page responsible disclosure report with remediation guidance.",
+      "outcome": "Documented full vulnerability chain, risk assessment, and server-side verification code patches; safely submitted to vendor via responsible disclosure.",
+      "architecture": "React Client UI -> Intercepted GraphQL Mutations -> Burp Suite Match & Replace automation -> Backend Rosetta Stone GraphQL API -> CWE-602 Exploitation Demonstration.",
+      "highlights": [
+        "In-depth reverse engineering of client-side JavaScript score computation logic",
+        "Custom Burp Suite automation rules enabling reliable, non-destructive proof-of-concept validation",
+        "Comprehensive 9-page vulnerability report detailing threat impact, CVSS score, and server-side fixes",
+        "Adherence to ethical hacking standards and responsible disclosure best practices"
+      ],
+      "stack": ["Burp Suite", "GraphQL", "React", "JavaScript"],
+      "github": "https://github.com/someone2042",
+      "report": "ros.pdf",
+      "video": "",
+      "images": [],
+      "built_at": "Independent Research",
+      "year": "2025"
+    },
+    {
+      "id": "tv",
+      "title": "Smart TV Red Team",
+      "tagline": "IoT Attack Chain: Exposed ADB to Root Access, LAN Pivoting & Session Hijacking",
+      "short": "Exposed ADB to root shell, LAN pivot and session-token theft showing 2FA bypass.",
+      "domains": ["off"],
+      "color": "#ff3b4e",
+      "why": "Unsecured smart devices inside internal networks provide low-effort entry points for attackers to establish persistence and pivot into corporate or private subnets.",
+      "what": "Discovered open Android Debug Bridge (ADB port 5555) on a target Smart TV during lab vulnerability scanning. Obtained root privileges, extracted cleartext Wi-Fi pre-shared keys, queried SQLite databases to harvest active OAuth/session tokens (bypassing 2FA), tapped the hardware microphone via HAL, and deployed an automated persistence APK.",
+      "outcome": "Demonstrated the full attack blast radius from a single smart device compromise, authored hardening recommendations, and published an educational write-up.",
+      "architecture": "Nmap subnet discovery -> TCP 5555 ADB Exploitation -> Root privilege escalation -> SQLite credential extraction -> Hardware abstraction layer audio tapping -> Subnet pivoting.",
+      "highlights": [
+        "Complete chain from unauthenticated network probe to root system shell",
+        "Session hijacking demonstrating 2FA circumvention via direct cookie/token theft",
+        "Hardware abstraction layer manipulation accessing onboard audio microphone",
+        "Prescriptive mitigation strategies for IoT segmentation and firmware hardening"
+      ],
+      "stack": ["ADB", "Android", "Nmap", "SQLite", "Linux", "Bash"],
+      "github": "https://github.com/someone2042",
+      "report": "",
+      "video": "",
+      "images": [
+        "tv (1).jfif",
+        "tv (2).jfif",
+        "tv (3).jfif",
+        "tv (4).jfif"
+      ],
+      "built_at": "Personal Lab",
+      "year": "2025"
+    },
+    {
+      "id": "aws",
+      "title": "AWS Secrets Monitor",
+      "tagline": "Event-Driven Serverless Detection & Alerting Pipeline for Cloud Secrets Access",
+      "short": "CloudTrail to CloudWatch to SNS alerting on suspicious secret access.",
+      "domains": ["cloud"],
+      "color": "#4d8dff",
+      "why": "Privileged credentials stored in cloud key vaults are primary targets; unauthorized access must be detected and alerted within seconds to prevent data breaches.",
+      "what": "Engineered an event-driven AWS security monitoring pipeline. Captured all AWS Secrets Manager API calls through multi-region AWS CloudTrail, ingested events into CloudWatch Log Groups with metric filter patterns, and triggered immediate SNS alerting upon abnormal secret retrieval.",
+      "outcome": "Configured automated real-time notification pipeline with immutable audit logs stored in an S3 bucket with Object Lock for forensic non-repudiation.",
+      "architecture": "AWS Secrets Manager API -> AWS CloudTrail Multi-Region Trail -> S3 Immutable Audit Vault -> CloudWatch Log Filter -> CloudWatch Alarm -> Amazon SNS Alert -> Security Team Email.",
+      "highlights": [
+        "Zero-latency alerting on sensitive GetSecretValue API calls",
+        "Immutable audit trails protected with S3 Object Lock and strict bucket policies",
+        "Least-privilege IAM policies and KMS key access scoping",
+        "Scalable serverless design with zero infrastructure maintenance overhead"
+      ],
+      "stack": ["AWS Secrets Manager", "AWS CloudTrail", "AWS CloudWatch", "AWS S3", "AWS SNS"],
+      "github": "https://github.com/someone2042",
+      "report": "",
+      "video": "",
+      "images": [
+        "aws.png"
+      ],
+      "built_at": "Personal Lab",
+      "year": "2025"
+    },
+    {
+      "id": "qual",
+      "title": "Qualys VMDR (1st place)",
+      "tagline": "Enterprise Vulnerability & Configuration Compliance Architecture — SKILL'UP 2026 Champion",
+      "short": "Architect on the winning SKILL'UP 2026 team: vuln and compliance design, SOAR playbooks, 5-year cost analysis.",
+      "domains": ["grc", "cloud"],
+      "color": "#a566f5",
+      "why": "Université Cadi Ayyad required modernizing its security posture by replacing a legacy Rapid7 deployment that lacked continuous compliance checks and failed to integrate with ServiceNow IT service workflows.",
+      "what": "Architected Qualys VMDR deployment across on-prem, hybrid, and Microsoft Azure cloud environments. Designed formal Context Views, 8 enterprise integration patterns (SSO, MFA, automated ticketing), a 5-year financial Cost-Benefit Analysis (CBA), and strict SLA engineering (4h RTO / 24h RPO). Led the technical design within a 7-person Agile Kanban team.",
+      "outcome": "Awarded 1st place (Premier Prix IT) and the Attestation d'Excellence at the SKILL'UP 2026 challenge organized by EMAN Aerospace and UCA.",
+      "architecture": "Campus & Cloud Assets -> Qualys Cloud Agents & Virtual Scanners -> Qualys Cloud Platform (VMDR + Policy Compliance) -> OAuth 2.0 Integration -> ServiceNow Automated Incident & Remediation Ticketing.",
+      "highlights": [
+        "1st Place winner among competitive multidisciplinary university engineering teams",
+        "Standardized enterprise architecture models using ArchiMate and BPMN process workflows",
+        "Automated vulnerability remediation lifecycle integrated with ServiceNow via REST APIs",
+        "Comprehensive 5-year financial ROI and operational Cost-Benefit Analysis"
+      ],
+      "stack": ["Qualys", "ServiceNow", "Azure", "BPMN", "ArchiMate"],
+      "github": "https://github.com/someone2042",
+      "report": "qual.pdf",
+      "video": "",
+      "images": [
+        "qual.jpg",
+        "qual (1).jfif",
+        "qual (2).jfif"
+      ],
+      "built_at": "EMAN Aerospace × UCA Competition",
+      "year": "2026"
+    },
+    {
+      "id": "law",
+      "title": "Cyberlaw Study",
+      "tagline": "Comparative Regulatory Framework: Moroccan Law 05-20, Law 09-08, LPM & EU GDPR",
+      "short": "Moroccan Law 05-20 and 09-08, French law and GDPR mapped to technical controls.",
+      "domains": ["grc"],
+      "color": "#a566f5",
+      "why": "Technical controls need legal backing.",
+      "what": "Authored an academic and technical comparative analysis mapping Moroccan cybersecurity and privacy legislation (Law 05-20, Law 09-08) alongside European counterparts (EU GDPR, French LPM). Established matrix translating legal obligations into tangible technical security controls.",
+      "outcome": "Produced a complete mapping matrix connecting statutory data breach notification, mandatory cryptography, log retention, and Data Protection Officer responsibilities directly to SIEM, IAM, and DLP configurations.",
+      "architecture": "Statutory Mandates (05-20, 09-08, GDPR) -> Legal Obligation Analysis -> Technical Control Translation (Encryption, Access Control, Audit Trails) -> SIEM / DLP Configuration Specifications.",
+      "highlights": [
+        "Direct translation of statutory privacy articles into measurable technical SIEM configurations",
+        "Cross-jurisdictional comparison between Moroccan and European regulatory frameworks",
+        "Practical playbook for compliance auditing, incident disclosure timelines, and data subject rights",
+        "Foundation for enterprise security governance and risk management compliance"
+      ],
+      "stack": ["Law 05-20", "Law 09-08", "GDPR", "LPM", "ISO 27001", "NIST CSF"],
+      "github": "https://github.com/someone2042",
+      "report": "law.pdf",
+      "video": "",
+      "images": [],
+      "built_at": "FST Marrakech",
+      "year": "2025"
+    },
+    {
+      "id": "devsec",
+      "title": "AI-Augmented DevSecOps & Secure Payment",
+      "status": "Under Development",
+      "tagline": "Automated Cloud CI/CD DevSecOps Pipeline with OWASP Defense & Sandbox Banking Security",
+      "short": "Under Development · Cloud DevSecOps pipeline automating 11 Tier-1 practices with SAST/DAST/SCA/Secrets scanning and a hardened payment sandbox.",
+      "domains": ["cloud", "off", "ai"],
+      "color": "#18c79a",
+      "why": "Modern rapid software delivery requires continuous security embedded directly into developer workflows (Shift-Left) without manual bottlenecks, while payment platforms face severe threats of transaction tampering, replay attacks, and sensitive cardholder data exposure.",
+      "what": "Currently in active development for the 'Sécurité des applications et des services' module at FST Marrakech. Engineering a cloud-deployable architecture encompassing Web front-end, Mobile app, REST/GraphQL APIs, and microservices backend. Automating all 11 Tier 1 DevSecOps security practices (Prates & Pereira framework) and advanced Tier 2 resilience mechanisms in CI/CD, incorporating SAST, DAST, SCA, and Secret Scanning for both human and AI-generated code. Developing and securing a simulated bank card payment system in a sandbox environment with active countermeasures against transaction manipulation, replay attacks, and token theft.",
+      "outcome": "Targeting 100% automated gate enforcement blocking vulnerable code and leaked secrets prior to deployment, while securing payment workflows against OWASP Top 10 Web (2025), Mobile, API, and LLM vulnerabilities.",
+      "architecture": "Code Commit (Git/GitLab) -> Automated Pre-Commit & Secret Scanning -> CI/CD Pipeline (SAST + SCA Dependency Check) -> Dynamic Testing (DAST) -> Hardened Container Deployment -> Sandboxed Payment Gateway (Replay & Tamper Defenses) -> Threat Modeling & Auditing.",
+      "highlights": [
+        "Status: In active development (Cycle SIT 3 · 2026 / 2027)",
+        "Automating all 11 Tier 1 DevSecOps security practices within cloud CI/CD pipelines",
+        "Integrating SAST, DAST, SCA, and Secret Scanning auditing human and AI-generated contributions",
+        "Hardened bank card payment sandbox with cryptographic protection against transaction replay and tampering",
+        "Comprehensive threat modeling across OWASP Top 10 Web (2025), Mobile, API, and LLM Applications"
+      ],
+      "stack": ["GitLab CI/CD", "Docker", "DevSecOps", "SAST/DAST", "OWASP Top 10", "Python", "GraphQL", "REST APIs"],
+      "github": "https://github.com/someone2042",
+      "report": "",
+      "video": "",
+      "images": [],
+      "built_at": "FST Marrakech (In Progress)",
+      "year": "2026 – 2027 · Under Development"
+    },
+    {
+      "id": "signal",
+      "title": "Signal E2EE Protocol",
+      "tagline": "Cryptographic Analysis & Implementation: X3DH, Double Ratchet & Authenticated Encryption",
+      "short": "Mathematical modeling and implementation of the Signal Protocol (X3DH, Double Ratchet, AES-256-CBC, HMAC-SHA256) proving Forward Secrecy & Post-Compromise Security.",
+      "domains": ["off", "grc"],
+      "color": "#ff3b4e",
+      "why": "Modern end-to-end encrypted messaging requires mathematical guarantees that compromised ephemeral keys or long-term identities cannot expose past communications (Forward Secrecy) or future messages (Post-Compromise Security).",
+      "what": "Conducted an in-depth mathematical analysis and implementation study of the Signal Protocol at FST Marrakech. Modeled the Extended Triple Diffie-Hellman (X3DH) asynchronous handshake using Identity Keys, Signed Prekeys, Ephemeral Keys, and One-Time Prekeys to derive a shared 256-bit root key via 4 ECDH operations. Built the Double Ratchet state machine combining Symmetric-key KDF Ratchets for per-message forward secrecy with Diffie-Hellman Ratchets for post-compromise self-healing. Implemented Authenticated Encryption (AE) pairing AES-256-CBC with HMAC-SHA256.",
+      "outcome": "Mathematically verified zero past message recovery upon endpoint compromise through ephemeral message key deletion, and guaranteed future recovery through active DH ratchet advancement on each conversational round-trip.",
+      "architecture": "Session Init: X3DH (Identity Keys + Signed Prekey + One-Time Prekey) -> 256-bit Root Key derivation via 4x ECDH -> Double Ratchet (DH Ratchet + Symmetric KDF Ratchet) -> Message Encryption: AES-256-CBC (128-bit IV) + HMAC-SHA256.",
+      "highlights": [
+        "Extended Triple Diffie-Hellman (X3DH) modeling asynchronous session setup with 4 ECDH operations",
+        "Double Ratchet state machine combining symmetric KDF chains with asymmetric DH ratchets",
+        "Mathematical proof and enforcement of Forward Secrecy and Post-Compromise Security",
+        "Authenticated Encryption construction pairing AES-256-CBC with HMAC-SHA256 integrity checks"
+      ],
+      "stack": ["Cryptography", "AES-256", "ECDH", "X3DH", "Double Ratchet", "HMAC-SHA256", "Python"],
+      "github": "https://github.com/someone2042",
+      "report": "",
+      "video": "",
+      "images": [],
+      "built_at": "FST Marrakech",
+      "year": "2025"
+    },
+    {
+      "id": "unicollab",
+      "title": "UniCollab Workspace",
+      "tagline": "Pre-AI Era Full-Stack Platform Built Entirely by Hand from Scratch with Task Board, Version Control & Real-Time Chat",
+      "short": "Handcrafted in the pre-AI era: 100% manually coded from scratch. Centralizes team task management, code version control, and real-time messaging.",
+      "domains": ["ai", "cloud"],
+      "color": "#9b7bff",
+      "why": "Student and engineering teams struggle with fragmented tooling across task boards, chat applications, and code repositories. Building an all-in-one platform without modern AI code assistants required complete mastery of full-stack system architecture, data models, and network protocols from first principles.",
+      "what": "Architected and engineered UniCollab entirely in the pre-AI era, manually coded from scratch line by line with zero AI assistance. Built a complete full-stack web application featuring interactive Kanban task management, a custom lightweight code version control system for tracking project source files, low-latency multi-user WebSocket real-time messaging, and synchronized team collaboration.",
+      "outcome": "Demonstrated strong software engineering and architectural rigor by crafting complex client-side reactivity, backend APIs, WebSocket pub/sub synchronization, and database schemas entirely by hand with clean, maintainable code.",
+      "architecture": "Client Web Application -> REST & WebSocket APIs -> Custom Task & Workflow Engine -> Lightweight Source File Revision Store -> Real-Time Message Broker -> Relational Database.",
+      "highlights": [
+        "Built in the pre-AI era: 100% manually coded from scratch with zero AI coding assistance",
+        "Interactive Kanban task board with custom drag-and-drop state transitions and progress analytics",
+        "Custom-built lightweight code version control system tracking multi-file project revisions",
+        "Full-duplex real-time WebSocket messaging and live multi-user team synchronization"
+      ],
+      "stack": ["JavaScript", "React", "Node.js", "WebSockets", "SQL"],
+      "github": "https://github.com/someone2042",
+      "report": "",
+      "video": "unicollab.mp4",
+      "images": [],
+      "built_at": "Academic Project (Pre-AI Era)",
+      "year": "2024"
+    }
+  ],
+
+  "certifications": [
+    {
+      "id": "sec_plus",
+      "name": "CompTIA Security+",
+      "issuer": "CompTIA",
+      "date": "Dec 2025 – Dec 2028",
+      "logo_image": "comptia_sec.png",
+      "logo_domain": "comptia.org",
+      "color": "#c8102e",
+      "credential_url": "",
+      "skills": ["Enterprise threat mitigation", "Cryptography", "IAM", "Zero Trust", "SOC operations", "GRC"]
+    },
+    {
+      "id": "opswat_otse",
+      "name": "OPSWAT OT Security Expert",
+      "issuer": "OPSWAT Academy",
+      "date": "Aug 2025",
+      "logo_image": "opswat.png",
+      "logo_domain": "opswat.com",
+      "color": "#0066cc",
+      "credential_url": "",
+      "skills": ["OT/ICS security", "IT/OT segmentation", "Purdue Model", "Industrial malware prevention"]
+    },
+    {
+      "id": "opswat_cip",
+      "name": "OPSWAT Critical Infrastructure Protection",
+      "issuer": "OPSWAT Academy",
+      "date": "Aug 2025",
+      "logo_image": "opswat.png",
+      "logo_domain": "opswat.com",
+      "color": "#0066cc",
+      "credential_url": "",
+      "skills": ["Critical infrastructure security", "MetaDefender", "Deep CDR", "Industrial compliance"]
+    },
+    {
+      "id": "fortinet_fca",
+      "name": "Fortinet Certified Associate (FCA)",
+      "issuer": "Fortinet",
+      "date": "Mar 2025",
+      "logo_image": "fortinet.jpg",
+      "logo_domain": "fortinet.com",
+      "color": "#ee3124",
+      "credential_url": "",
+      "skills": ["FortiGate NGFW", "Firewall policies", "SSL VPN", "IPsec VPN", "Web filtering"]
+    },
+    {
+      "id": "fortinet_fcf",
+      "name": "Fortinet Certified Fundamentals (FCF)",
+      "issuer": "Fortinet",
+      "date": "Mar 2025",
+      "logo_image": "fortinet.jpg",
+      "logo_domain": "fortinet.com",
+      "color": "#ee3124",
+      "credential_url": "",
+      "skills": ["Threat landscape", "Core network security operations"]
+    },
+    {
+      "id": "cisco_ceh",
+      "name": "Cisco Ethical Hacker",
+      "issuer": "Cisco Networking Academy",
+      "date": "Feb 2025",
+      "logo_image": "Cisco.webp",
+      "logo_domain": "cisco.com",
+      "color": "#1ba0d7",
+      "credential_url": "",
+      "skills": ["Reconnaissance", "Vulnerability scanning", "Exploitation", "Post-exploitation", "Pentest reporting"]
+    },
+    {
+      "id": "cisco_intro",
+      "name": "Cisco Intro to Cybersecurity",
+      "issuer": "Cisco Networking Academy",
+      "date": "Mar 2025",
+      "logo_image": "Cisco.webp",
+      "logo_domain": "cisco.com",
+      "color": "#1ba0d7",
+      "credential_url": "",
+      "skills": ["Cybersecurity fundamentals"]
+    },
+    {
+      "id": "cisco_net",
+      "name": "Cisco Networking Basics",
+      "issuer": "Cisco Networking Academy",
+      "date": "Nov 2023",
+      "logo_image": "Cisco.webp",
+      "logo_domain": "cisco.com",
+      "color": "#1ba0d7",
+      "credential_url": "",
+      "skills": ["Networking fundamentals", "TCP/IP", "Routing and Switching"]
+    }
+  ],
+
+  "education": [
+    {
+      "id": "uca",
+      "institution": "Université Cadi Ayyad (FST Marrakech)",
+      "logo_image": "uca.png",
+      "logo_domain": "uca.ma",
+      "logo_fallback": "UCA",
+      "logo_bg": "#0b6e4f",
+      "degree": "State Engineering Degree, IT Security & AI",
+      "period": "2024 – 2027 (Currently S5)",
+      "location": "Marrakech, Morocco",
+      "description": "Governance and risk, DevSecOps, incident response and forensics, cloud and blockchain security, banking and OT/ICS security, pentesting, cryptography, networks and systems.",
+      "modules": ["IT Security Governance & Risk", "DevSecOps & Secure SDLC", "Incident Response & Digital Forensics", "Cloud & Blockchain Security", "OT/ICS Security", "Security Testing & Ethical Hacking", "Cryptography", "AI/ML Security", "Network & Systems Security"]
+    },
+    {
+      "id": "uh2",
+      "institution": "Université Hassan II, Casablanca",
+      "logo_image": "UH2.png",
+      "logo_domain": "univh2c.ma",
+      "logo_fallback": "UH2",
+      "logo_bg": "#8c1d40",
+      "degree": "B.Sc. Mathematics & Computer Science",
+      "period": "2021 – 2024",
+      "location": "Casablanca, Morocco",
+      "description": "Algorithms, C/C++, 8086 assembly, compiler design, operating systems internals, networks, probability and statistics.",
+      "modules": ["Algorithms & Data Structures", "C/C++ Systems Programming", "8086 Assembly", "Compiler Design", "Operating Systems", "Computer Networks", "Mathematics & Statistics"]
+    }
+  ],
+
+  "awards": [
+    {
+      "id": "skillup",
+      "title": "1st Place (IT) — SKILL'UP 2026",
+      "meta": "EMAN Aerospace × Université Cadi Ayyad · May 2026",
+      "color": "#f5b301",
+      "icon": "1st",
+      "description": "Security & Telecom Architect in a 7-person Agile Kanban team. Designed the Qualys VMDR vulnerability and compliance solution for the university. Awarded the Attestation d'Excellence."
+    }
+  ],
+
+  "stack": [
+    { "category": "SecOps", "tools": ["Wazuh", "OpenSearch", "Suricata", "Zeek", "Sysmon", "Splunk", "CrowdSec"] },
+    { "category": "Zero Trust & Network", "tools": ["Cloudflare", "Zscaler", "Fortinet", "pfSense", "Cisco"] },
+    { "category": "Vuln, IAM & Cloud", "tools": ["Qualys", "ServiceNow", "Entra ID", "AWS EC2", "Azure", "Docker", "GitLab"] },
+    { "category": "AI & Automation", "tools": ["Python", "LangGraph", "Gemini", "PyOD", "SHAP", "FastAPI"] },
+    { "category": "Offensive", "tools": ["Burp Suite", "Nmap", "Metasploit", "Atomic Red Team", "Active Directory"] },
+    { "category": "Code", "tools": ["Python", "Java", "C/C++", "Bash", "PHP", "Laravel", "JavaScript", "React", "Oracle"] },
+    { "category": "GRC", "tools": ["ISO 27001", "NIST", "CIS v8", "PCI-DSS", "GDPR", "Law 05-20"] }
+  ],
+
+  "graph": {
+    "nodes": [
+      { "id": "you",    "type": "you",  "label": "You (recruiter)",      "desc": "The person with an open internship slot. You are one hop away." },
+      { "id": "me",     "type": "me",   "label": "Mohamed",              "desc": "5th-year engineering student, IT Security & AI. 3 internships, 1st place at SKILL'UP 2026, CompTIA Security+. Languages: Arabic, French, English." },
+      { "id": "soc",    "type": "role", "label": "SOC / Detection",       "desc": "Detection pipeline built end to end and tested on live malware." },
+      { "id": "ai",     "type": "role", "label": "AI SecOps",             "desc": "Agents with auditable reasoning and explainable anomaly scoring." },
+      { "id": "cloud",  "type": "role", "label": "Cloud & Zero Trust",    "desc": "Access designed so servers expose no inbound ports." },
+      { "id": "off",    "type": "role", "label": "Offensive / AppSec",    "desc": "Real vulnerability disclosed, IoT rooted in the lab." },
+      { "id": "grc",    "type": "role", "label": "GRC & OT",              "desc": "Controls mapped to frameworks and law, plus OT/ICS security." },
+      { "id": "lucid",  "type": "proj", "label": "Lucid SOC",             "desc": "LangGraph AI analyst that investigates alerts in 4 seconds." },
+      { "id": "sba",    "type": "proj", "label": "Anomaly Engine",         "desc": "Isolation Forest on streaming log templates, SHAP explanations." },
+      { "id": "zt",     "type": "proj", "label": "Zero-Trust Lab",         "desc": "AWS EC2 with 0 inbound rules behind Cloudflare Tunnel." },
+      { "id": "purple", "type": "proj", "label": "Purple Team AD Lab",     "desc": "BadBlood AD attacked with Atomic Red Team, defended with Wazuh." },
+      { "id": "ros",    "type": "proj", "label": "Responsible Disclosure", "desc": "GraphQL CWE-602 bypass, 9-page report with fixes." },
+      { "id": "tv",     "type": "proj", "label": "Smart TV Red Team",      "desc": "Root shell, LAN pivot and session-token theft via ADB." },
+      { "id": "aws",    "type": "proj", "label": "AWS Secrets Monitor",    "desc": "CloudTrail to CloudWatch to SNS alerting on secret access." },
+      { "id": "qual",   "type": "proj", "label": "Qualys VMDR (1st)",      "desc": "Winning SKILL'UP 2026 architecture, SOAR playbooks, 5-year CBA." },
+      { "id": "law",    "type": "proj", "label": "Cyberlaw Study",         "desc": "Moroccan Law 05-20, 09-08, French law and GDPR mapped." },
+      { "id": "devsec", "type": "proj", "label": "AI DevSecOps",          "desc": "Cloud CI/CD pipeline, 11 Tier-1 practices & payment sandbox." },
+      { "id": "signal", "type": "proj", "label": "Signal E2EE",           "desc": "X3DH, Double Ratchet, Forward & Post-Compromise Secrecy." },
+      { "id": "unicollab", "type": "proj", "label": "UniCollab",         "desc": "Pre-AI era, 100% manually coded from scratch. Tasks, version control & live chat." },
+      { "id": "ocd",    "type": "org",  "label": "Orange Cyberdefense",    "desc": "Security Engineering Intern, Casablanca, Jul–Sep 2026.", "img": "orange.svg" },
+      { "id": "cas",    "type": "org",  "label": "Casanet",                "desc": "SOC Analyst Intern (Maroc Telecom), Rabat, 2025.", "img": "casanet.jpg" },
+      { "id": "web",    "type": "org",  "label": "webagency-maroc",        "desc": "Full-stack and AppSec intern, 2024.", "img": "webagency.png" },
+      { "id": "sec",    "type": "cert", "label": "Security+",              "desc": "CompTIA, Dec 2025.", "img": "comptia_sec.png" },
+      { "id": "otse",   "type": "cert", "label": "OPSWAT OTSE",            "desc": "OT security expert, Aug 2025.", "img": "opswat.png" },
+      { "id": "fca",    "type": "cert", "label": "Fortinet FCA",           "desc": "FortiGate NGFW, VPN, filtering. Mar 2025.", "img": "fortinet.jpg" },
+      { "id": "ceh",    "type": "cert", "label": "Cisco Ethical Hacker",   "desc": "Pentest lifecycle. Feb 2025.", "img": "Cisco.webp" }
+    ],
+    "edges": [
+      ["you","me","CanHire"],["me","soc","CanFill"],["me","ai","CanFill"],["me","cloud","CanFill"],["me","off","CanFill"],["me","grc","CanFill"],
+      ["me","ocd","InternedAt"],["me","cas","InternedAt"],["me","web","InternedAt"],
+      ["soc","lucid","ProvenBy"],["soc","sba","ProvenBy"],["soc","purple","ProvenBy"],["soc","aws","ProvenBy"],
+      ["ai","lucid","ProvenBy"],["ai","sba","ProvenBy"],["ai","unicollab","ProvenBy"],
+      ["cloud","zt","ProvenBy"],["cloud","aws","ProvenBy"],["cloud","qual","ProvenBy"],["cloud","devsec","ProvenBy"],
+      ["off","ros","ProvenBy"],["off","tv","ProvenBy"],["off","purple","ProvenBy"],["off","signal","ProvenBy"],["off","devsec","ProvenBy"],
+      ["grc","qual","ProvenBy"],["grc","law","ProvenBy"],["grc","signal","ProvenBy"],
+      ["ocd","lucid","BuiltAt"],["ocd","sba","BuiltAt"],["ocd","zt","BuiltAt"],
+      ["cas","soc","ExperienceIn"],["web","off","ExperienceIn"],
+      ["sec","soc","Validates"],["sec","grc","Validates"],["otse","grc","Validates"],["fca","cloud","Validates"],["ceh","off","Validates"]
+    ]
+  }
+}

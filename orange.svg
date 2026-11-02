@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" rx="36" fill="#0b0e14"/>
+  <rect x="24" y="24" width="70" height="70" rx="6" fill="#ff7900"/>
+  <text x="104" y="65" fill="#ffffff" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="800" letter-spacing="-0.5">orange</text>
+  <text x="24" y="132" fill="#ffffff" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="700" letter-spacing="-0.3">Cyberdefense</text>
+  <circle cx="168" cy="126" r="4" fill="#ff7900"/>
+</svg>
